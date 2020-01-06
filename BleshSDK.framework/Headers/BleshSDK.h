@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CommonCrypto/CommonCrypto.h>
+#import "UIGifImage.h"
 
 //! Project version number for BleshSDK.
 FOUNDATION_EXPORT double BleshSDKVersionNumber;
