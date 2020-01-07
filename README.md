@@ -1,6 +1,6 @@
 # Blesh iOS SDK 5 Developer Guide
 
-**Version:** *5.1.2*
+**Version:** *5.1.3*
 
 This document describes integration of the Blesh iOS SDK with your iOS application.
 
@@ -10,11 +10,14 @@ Blesh iOS SDK collects location information from a device on which the iOS appli
 
 ## Changelog
 
+  * **5.1.3** *(Released 01/07/2019)*
+    * Improved iOS 13 compatibility
+
   * **5.1.2** *(Released 01/07/2019)*
-    * Improve iOS 13 compatibility
+    * Improved iOS 13 compatibility
 
   * **5.1.1** *(Released 01/06/2019)*
-    * Add English and Turkish localizations
+    * Added English and Turkish localizations
 
   * **5.1.0** *(Released 12/27/2019)*
     * Added local push notification support
@@ -48,7 +51,7 @@ The Blesh iOS SDK can be added either by using CocoaPods or manually.
 
 #### 1.1. Adding the Blesh iOS SDK with CocoaPods
 
-Referencing the `BleshSDK` pod with version `5.1.2` in the `Podfile` will be sufficient to add the Blesh iOS SDK to your project.
+Referencing the `BleshSDK` pod with version `5.1.3` in the `Podfile` will be sufficient to add the Blesh iOS SDK to your project.
 
 **Steps to add:**
 
@@ -65,7 +68,7 @@ target 'YOUR_APPLICATION_NAME' do
 
   # ... beginning of your Podfile ...
 
-  pod 'BleshSDK', :git => 'https://github.com/bleshcom/Blesh-iOS-SDK.git', :tag => '5.1.2' # this will reference the Blesh iOS SDK 5
+  pod 'BleshSDK', :git => 'https://github.com/bleshcom/Blesh-iOS-SDK.git', :tag => '5.1.3' # this will reference the Blesh iOS SDK 5
 
   # ... remaining of your Podfile ...
 
@@ -93,8 +96,6 @@ https://github.com/bleshcom/Blesh-iOS-SDK.git
 To integrate a specific version of the SDK, a git revision with the tag for the desired version should be checked out.
 
 2. Add `BleshSDK.framework` to your Xcode project
-
-<div style="page-break-after: always;"></div>
 
 ### 2. Notifying the Blesh iOS SDK About Push Notifications
 
@@ -200,8 +201,6 @@ This descriptor is used for iOS 11 and later. Provides permission for both when 
 
 Sample Text: *"This application uses your location in order to inform you about interesting offers nearby. We advice you to choose Always option to get the offers even when you are not using the application!"*
 
-<div style="page-break-after: always;"></div>
-
 You can insert it into your `Info.plist` file in the following syntax.
 
 ```xml
@@ -254,8 +253,6 @@ You can either create & manage a new instance of `BleshSdk` or you can access th
 
 In order to continue to receive notifications even when the app is **killed/not running in the background**, invoking `start` method should not require the application to be in the foreground. Please note that best practice is starting Blesh under **applicationDidFinishLaunchingWithOptions** in the app delegate.
 
-<div style="page-break-after: always;"></div>
-
 #### Swift
 
 `BleshSdk` contains the following `start` method:
@@ -269,14 +266,14 @@ start(
 
 * `withApplicationUser` parameter allows you to enchance the audience data by providing information about the primary user (subscriber) of your application. You can give any information which makes the subscriber unique in your application's understanding. The `BleshSdkApplicationUser` class contains the following:
 
-| Property    | Type                     | Description                                  | Example              |
-|-------------|--------------------------|----------------------------------------------|----------------------|
-| userId      | String?                  | Optional unique identifier of the user       | 42                   |
-| gender      | BleshSdkApplicationUserGender?                | Optional gender of the user (.female or .male) | .female               |
-| yearOfBirth | Int?                     | Optional year of birth of the user           | 1999                 |
-| email       | String?                  | Optional email address of the user           | jane.doe@example.com |
-| phoneNumber | String?                  | Optional mobile phone number of the user     | +905550000000        |
-| other       | Dictionary<String, String>? | Optional extra information for the user      | nil                  |
+| Property    | Type                           | Description                                    | Example              |
+|-------------|--------------------------------|------------------------------------------------|----------------------|
+| userId      | String?                        | Optional unique identifier of the user         | 42                   |
+| gender      | BleshSdkApplicationUserGender? | Optional gender of the user (.female or .male) | .female              |
+| yearOfBirth | Int?                           | Optional year of birth of the user             | 1999                 |
+| email       | String?                        | Optional email address of the user             | jane.doe@example.com |
+| phoneNumber | String?                        | Optional mobile phone number of the user       | +905550000000        |
+| other       | Dictionary<String, String>?    | Optional extra information for the user        | nil                  |
 
 > **Note:** `email` and `phoneNumber` details are never sent in plain-text to the *Blesh Ads Platform*. These values are always irreversibly hashed so that no personally identifiable information is stored.
 
@@ -289,8 +286,6 @@ start(
 > **Note:** `testMode` is off by default. You can enable this mode during your integration tests. Production environment will not be effected when this flag is set to `true`.
 
 * `completionHandler` parameter allows you to execute your business logic after the Blesh iOS SDK initialization is succeeded or failed.
-
-<div style="page-break-after: always;"></div>
 
 ##### Example: Simple Initialization (Singleton)
 
@@ -309,8 +304,6 @@ let bleshSdk = BleshSdk()
 
 bleshSdk.start()
 ```
-
-<div style="page-break-after: always;"></div>
 
 ##### Example: Complete Initialization
 
@@ -336,8 +329,6 @@ BleshSdk.sharedInstance.start(
 		NSLog("BleshSDK start completed: " + sdkState.description)
 	}
 ```
-
-<div style="page-break-after: always;"></div>
 
 ### 3. Notifying the Blesh iOS SDK About Changes in Permissions
 
