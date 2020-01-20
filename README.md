@@ -40,7 +40,7 @@ Blesh iOS SDK collects location information from a device on which the iOS appli
 In order to integrate the Blesh iOS SDK make sure you are:
 
   * Targeting iOS version 9 or higher
-  * Targeting the Swift 5 compiler
+  * Targeting the Swift 5.1 compiler
   * Registered on the *Blesh Publisher Portal*
     * You may need to create a *Blesh Ads Platform Access Key* for the iOS platform
 
