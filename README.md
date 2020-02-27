@@ -41,6 +41,8 @@ In order to integrate the Blesh iOS SDK make sure you are:
 
   * Targeting iOS version 9 or higher
   * Targeting the Swift 5.1 compiler
+  * Enabling the "`Always Embed Swift Standard Libraries`" build option (or the "`Embedded Content Contains Swift Code`" build option for older versions of Xcode) if your application is developed using the Objective-C language
+    * Swift Standard Libraries are required for iOS versions 12.1 or earlier. See [QA1881](https://developer.apple.com/library/archive/qa/qa1881/_index.html) for details
   * Registered on the *Blesh Publisher Portal*
     * You may need to create a *Blesh Ads Platform Access Key* for the iOS platform
 
