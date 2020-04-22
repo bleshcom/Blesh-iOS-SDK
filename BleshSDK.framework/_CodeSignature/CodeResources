@@ -18,15 +18,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		NbtXUALhPM3SHA8FjK1Vju2pP24=
+		L6Xc7NBcwlQnwUf9FiLQDKPw/uo=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/arm.swiftdoc</key>
 		<data>
-		KKrvuVYTBulSeZpJx01hJYyNGUo=
+		NNwiLI+92jXBgoXukcNVwsB9sz4=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		KZk82vhtF0kpzak9PX1R1SNRKKY=
+		09pGNVsZFHZZI4gJVAKQXVf3R6E=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -98,22 +98,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KKrvuVYTBulSeZpJx01hJYyNGUo=
+			NNwiLI+92jXBgoXukcNVwsB9sz4=
 			</data>
 			<key>hash2</key>
 			<data>
-			tr02JQvA8C0vt9aCWgThWWRJFEpMZNB+cN1j8tWR5gA=
+			EnfqkN/tXIPnv63n54M4kcUS6tXnqeF6SjvXEo56ASc=
 			</data>
 		</dict>
 		<key>Modules/BleshSDK.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KZk82vhtF0kpzak9PX1R1SNRKKY=
+			09pGNVsZFHZZI4gJVAKQXVf3R6E=
 			</data>
 			<key>hash2</key>
 			<data>
-			iexLqAsRdMZmeI2jyvq8nsj3JD0r+uoBesVeUT8WFv4=
+			38g17SPBCGBVh7JOKY/5L88ZwVEwstDnD1U6zyvCITQ=
 			</data>
 		</dict>
 		<key>Modules/BleshSDK.swiftmodule/arm64.swiftdoc</key>
