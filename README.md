@@ -1,6 +1,6 @@
 # Blesh iOS SDK 5 Developer Guide
 
-**Version:** *5.1.5*
+**Version:** *5.2.0*
 
 This document describes integration of the Blesh iOS SDK with your iOS application.
 
@@ -9,6 +9,9 @@ This document describes integration of the Blesh iOS SDK with your iOS applicati
 Blesh iOS SDK collects location information from a device on which the iOS application is installed. Blesh Ads Platform uses this data for creating and enhancing audiences, serving targeted ads, and insights generation.
 
 ## Changelog
+
+  * **5.2.0** *(Released 05/02/2020)*
+    * Updated the Swift compiler to 5.2
 
   * **5.1.5** *(Released 04/18/2020)*
     * Enabled bitcode
@@ -59,7 +62,7 @@ The Blesh iOS SDK can be added either by using CocoaPods or manually.
 
 #### 1.1. Adding the Blesh iOS SDK with CocoaPods
 
-Referencing the `BleshSDK` pod with version `5.1.5` in the `Podfile` will be sufficient to add the Blesh iOS SDK to your project.
+Referencing the `BleshSDK` pod with version `5.2.0` in the `Podfile` will be sufficient to add the Blesh iOS SDK to your project.
 
 **Steps to add:**
 
@@ -76,7 +79,7 @@ target 'YOUR_APPLICATION_NAME' do
 
   # ... beginning of your Podfile ...
 
-  pod 'BleshSDK', :git => 'https://github.com/bleshcom/Blesh-iOS-SDK.git', :tag => '5.1.5' # this will reference the Blesh iOS SDK 5
+  pod 'BleshSDK', :git => 'https://github.com/bleshcom/Blesh-iOS-SDK.git', :tag => '5.2.0' # this will reference the Blesh iOS SDK 5
 
   # ... remaining of your Podfile ...
 
