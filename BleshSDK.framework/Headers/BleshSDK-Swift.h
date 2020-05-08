@@ -188,6 +188,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import CoreLocation;
 @import ObjectiveC;
+@import UIKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -262,6 +263,8 @@ typedef SWIFT_ENUM(NSInteger, BleshSdkStartState, closed) {
   BleshSdkStartStateSuccess = 1,
   BleshSdkStartStateSkipped = 2,
 };
+
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
