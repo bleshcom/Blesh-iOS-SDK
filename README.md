@@ -1,6 +1,6 @@
 # Blesh iOS SDK 5 Developer Guide
 
-**Version:** *5.2.5*
+**Version:** *5.2.6*
 
 This document describes integration of the Blesh iOS SDK with your iOS application.
 
@@ -9,6 +9,9 @@ This document describes integration of the Blesh iOS SDK with your iOS applicati
 Blesh iOS SDK collects location information from a device on which the iOS application is installed. Blesh Ads Platform uses this data for creating and enhancing audiences, serving targeted ads, and insights generation.
 
 ## Changelog
+
+  * **5.2.6** *(Released 10/05/2020)*
+    * Updated the Swift compiler to 5.3
 
   * **5.2.5** *(Released 07/27/2020)*
     * Updated the Swift compiler to 5.1
@@ -61,7 +64,7 @@ Blesh iOS SDK collects location information from a device on which the iOS appli
 In order to integrate the Blesh iOS SDK make sure you are:
 
   * Targeting iOS version 9 or higher
-  * Targeting the Swift 5.2 compiler
+  * Targeting the Swift 5.3 compiler
   * Enabling the "`Always Embed Swift Standard Libraries`" build option (or the "`Embedded Content Contains Swift Code`" build option for older versions of Xcode) if your application is developed using the Objective-C language
     * Swift Standard Libraries are required for iOS versions 12.1 or earlier. See [QA1881](https://developer.apple.com/library/archive/qa/qa1881/_index.html) for details
   * Registered on the *Blesh Publisher Portal*
@@ -77,7 +80,7 @@ The Blesh iOS SDK can be added either by using CocoaPods or manually.
 
 #### 1.1. Adding the Blesh iOS SDK with CocoaPods
 
-Referencing the `BleshSDK` pod with version `5.2.5` in the `Podfile` will be sufficient to add the Blesh iOS SDK to your project.
+Referencing the `BleshSDK` pod with version `5.2.6` in the `Podfile` will be sufficient to add the Blesh iOS SDK to your project.
 
 **Steps to add:**
 
@@ -94,7 +97,7 @@ target 'YOUR_APPLICATION_NAME' do
 
   # ... beginning of your Podfile ...
 
-  pod 'BleshSDK', :git => 'https://github.com/bleshcom/Blesh-iOS-SDK.git', :tag => '5.2.5' # this will reference the Blesh iOS SDK 5
+  pod 'BleshSDK', :git => 'https://github.com/bleshcom/Blesh-iOS-SDK.git', :tag => '5.2.6' # this will reference the Blesh iOS SDK 5
 
   # ... remaining of your Podfile ...
 
