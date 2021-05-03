@@ -1,0 +1,166 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target armv7s-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BleshSDK
+import AdSupport
+@_exported import BleshSDK
+import CoreAudioKit
+import CoreLocation
+import CoreTelephony
+import Foundation
+import Swift
+import SystemConfiguration
+import UIKit
+import UserNotifications
+import WebKit
+@objc public class BleshSdkApplicationUser : ObjectiveC.NSObject, Swift.Codable {
+  @objc public init(userId: Swift.String?, genderCode: Foundation.NSNumber?, yearOfBirth: Foundation.NSNumber?, email: Swift.String?, phoneNumber: Swift.String?, other: Swift.Dictionary<Swift.String, Swift.String>?)
+  public init(userId: Swift.String?, gender: BleshSDK.BleshSdkApplicationUserGender?, yearOfBirth: Swift.Int?, email: Swift.String?, phoneNumber: Swift.String?, other: Swift.Dictionary<Swift.String, Swift.String>?)
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc public enum BleshSdkStartState : Swift.Int, Swift.CustomStringConvertible {
+  case failure = 0
+  case success = 1
+  case skipped = 2
+  public var description: Swift.String {
+    get
+  }
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class BleshSdk : ObjectiveC.NSObject {
+  @objc public static let sharedInstance: BleshSDK.BleshSdk
+  weak open var delegate: BleshSDK.BleshSdkDelegate?
+  @objc public var isStarted: Swift.Bool {
+    @objc get
+  }
+  @objc public var adsEnabled: Swift.Bool {
+    @objc get
+    @objc set(new)
+  }
+  @objc override dynamic public init()
+  @objc public func start(withApplicationUser applicationUser: BleshSDK.BleshSdkApplicationUser? = nil, withConfiguration configuration: BleshSDK.BleshSdkConfiguration? = nil, completionHandler: ((BleshSDK.BleshSdkStartState) -> Swift.Void)? = nil)
+  @objc public func stop()
+  @objc public func restart()
+  @objc public func didChangeLocationAuthorization(_ status: CoreLocation.CLAuthorizationStatus)
+  @objc public func didChangeNotificationAuthorization(_ granted: Swift.Bool)
+  @available(iOS 10, *)
+  @objc public func didReceiveUNNotificationResponse(_ response: UserNotifications.UNNotificationResponse)
+  @objc public func didReceiveLocalNotification(_ notification: UIKit.UILocalNotification)
+  @objc deinit
+}
+@objc public enum BleshSdkApplicationUserGender : Swift.Int {
+  case female = 0
+  case male = 1
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+}
+public enum ReachabilityError : Swift.Error {
+  case FailedToCreateWithAddress(Darwin.sockaddr_in)
+  case FailedToCreateWithHostname(Swift.String)
+  case UnableToSetCallback
+  case UnableToSetDispatchQueue
+}
+@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
+public let ReachabilityChangedNotification: Foundation.NSNotification.Name
+extension NSNotification.Name {
+  public static let reachabilityChanged: Foundation.Notification.Name
+}
+public class Reachability {
+  public typealias NetworkReachable = (BleshSDK.Reachability) -> ()
+  public typealias NetworkUnreachable = (BleshSDK.Reachability) -> ()
+  @available(*, unavailable, renamed: "Conection")
+  public enum NetworkStatus : Swift.CustomStringConvertible {
+    case notReachable, reachableViaWiFi, reachableViaWWAN
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: BleshSDK.Reachability.NetworkStatus, b: BleshSDK.Reachability.NetworkStatus) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public enum Connection : Swift.CustomStringConvertible {
+    case none, wifi, cellular
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: BleshSDK.Reachability.Connection, b: BleshSDK.Reachability.Connection) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public var whenReachable: BleshSDK.Reachability.NetworkReachable?
+  public var whenUnreachable: BleshSDK.Reachability.NetworkUnreachable?
+  @available(*, deprecated, renamed: "allowsCellularConnection")
+  final public let reachableOnWWAN: Swift.Bool
+  public var allowsCellularConnection: Swift.Bool
+  public var notificationCenter: Foundation.NotificationCenter
+  @available(*, deprecated, renamed: "connection.description")
+  public var currentReachabilityString: Swift.String {
+    get
+  }
+  @available(*, unavailable, renamed: "connection")
+  public var currentReachabilityStatus: BleshSDK.Reachability.Connection {
+    get
+  }
+  public var connection: BleshSDK.Reachability.Connection {
+    get
+  }
+  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability)
+  convenience public init?(hostname: Swift.String)
+  convenience public init?()
+  @objc deinit
+}
+extension Reachability {
+  public func startNotifier() throws
+  public func stopNotifier()
+  @available(*, deprecated, message: "Please use `connection != .none`")
+  public var isReachable: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .cellular`")
+  public var isReachableViaWWAN: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .wifi`")
+  public var isReachableViaWiFi: Swift.Bool {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+@objc public protocol BleshSdkDelegate {
+  @objc optional func bleshSdk(_ sdk: BleshSDK.BleshSdk, didCompleteStartWith state: BleshSDK.BleshSdkStartState)
+  @objc optional func bleshSdk(_ sdk: BleshSDK.BleshSdk, willDisplayNotification notificationId: Swift.String) -> Swift.Bool
+}
+@objc public class BleshSdkConfiguration : ObjectiveC.NSObject, Swift.Codable {
+  @objc public init(testMode: Swift.Bool = false, adsEnabled: Swift.Bool = true)
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension BleshSDK.BleshSdkStartState : Swift.Equatable {}
+extension BleshSDK.BleshSdkStartState : Swift.Hashable {}
+extension BleshSDK.BleshSdkStartState : Swift.RawRepresentable {}
+extension BleshSDK.BleshSdkApplicationUserGender : Swift.Equatable {}
+extension BleshSDK.BleshSdkApplicationUserGender : Swift.Hashable {}
+extension BleshSDK.BleshSdkApplicationUserGender : Swift.RawRepresentable {}
+@available(*, unavailable, renamed: "Conection")
+extension BleshSDK.Reachability.NetworkStatus : Swift.Equatable {}
+@available(*, unavailable, renamed: "Conection")
+extension BleshSDK.Reachability.NetworkStatus : Swift.Hashable {}
+extension BleshSDK.Reachability.Connection : Swift.Equatable {}
+extension BleshSDK.Reachability.Connection : Swift.Hashable {}
