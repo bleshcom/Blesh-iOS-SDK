@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target i386-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BleshSDK
 import AdSupport
 @_exported import BleshSDK
@@ -15,10 +15,10 @@ import WebKit
 @objc public class BleshSdkApplicationUser : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(userId: Swift.String?, genderCode: Foundation.NSNumber?, yearOfBirth: Foundation.NSNumber?, email: Swift.String?, phoneNumber: Swift.String?, other: Swift.Dictionary<Swift.String, Swift.String>?)
   public init(userId: Swift.String?, gender: BleshSDK.BleshSdkApplicationUserGender?, yearOfBirth: Swift.Int?, email: Swift.String?, phoneNumber: Swift.String?, other: Swift.Dictionary<Swift.String, Swift.String>?)
-  @objc deinit
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @objc public enum BleshSdkStartState : Swift.Int, Swift.CustomStringConvertible {
   case failure = 0
@@ -27,8 +27,8 @@ import WebKit
   public var description: Swift.String {
     get
   }
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -57,11 +57,11 @@ import WebKit
 @objc public enum BleshSdkApplicationUserGender : Swift.Int {
   case female = 0
   case male = 1
+  public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
-  public init?(rawValue: Swift.Int)
 }
 public enum ReachabilityError : Swift.Error {
   case FailedToCreateWithAddress(Darwin.sockaddr_in)
@@ -84,10 +84,10 @@ public class Reachability {
       get
     }
     public static func == (a: BleshSDK.Reachability.NetworkStatus, b: BleshSDK.Reachability.NetworkStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
   public enum Connection : Swift.CustomStringConvertible {
     case none, wifi, cellular
@@ -95,10 +95,10 @@ public class Reachability {
       get
     }
     public static func == (a: BleshSDK.Reachability.Connection, b: BleshSDK.Reachability.Connection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
   public var whenReachable: BleshSDK.Reachability.NetworkReachable?
   public var whenUnreachable: BleshSDK.Reachability.NetworkUnreachable?
@@ -147,10 +147,10 @@ extension Reachability {
 }
 @objc public class BleshSdkConfiguration : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(testMode: Swift.Bool = false, adsEnabled: Swift.Bool = true)
-  @objc deinit
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 extension BleshSDK.BleshSdkStartState : Swift.Equatable {}
 extension BleshSDK.BleshSdkStartState : Swift.Hashable {}
