@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
 // swift-module-flags: -target armv7s-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BleshSDK
 import AdSupport
 @_exported import BleshSDK
@@ -12,10 +12,10 @@ import SystemConfiguration
 import UIKit
 import UserNotifications
 import WebKit
+import _Concurrency
 @objc public class BleshSdkApplicationUser : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(userId: Swift.String?, genderCode: Foundation.NSNumber?, yearOfBirth: Foundation.NSNumber?, email: Swift.String?, phoneNumber: Swift.String?, other: Swift.Dictionary<Swift.String, Swift.String>?)
   public init(userId: Swift.String?, gender: BleshSDK.BleshSdkApplicationUserGender?, yearOfBirth: Swift.Int?, email: Swift.String?, phoneNumber: Swift.String?, other: Swift.Dictionary<Swift.String, Swift.String>?)
-  @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
@@ -71,7 +71,7 @@ public enum ReachabilityError : Swift.Error {
 }
 @available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
 public let ReachabilityChangedNotification: Foundation.NSNotification.Name
-extension NSNotification.Name {
+extension Foundation.NSNotification.Name {
   public static let reachabilityChanged: Foundation.Notification.Name
 }
 public class Reachability {
@@ -122,7 +122,7 @@ public class Reachability {
   convenience public init?()
   @objc deinit
 }
-extension Reachability {
+extension BleshSDK.Reachability {
   public func startNotifier() throws
   public func stopNotifier()
   @available(*, deprecated, message: "Please use `connection != .none`")
@@ -147,7 +147,6 @@ extension Reachability {
 }
 @objc public class BleshSdkConfiguration : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(testMode: Swift.Bool = false, adsEnabled: Swift.Bool = true)
-  @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
