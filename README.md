@@ -1,6 +1,6 @@
 # Blesh iOS SDK 5 Developer Guide
 
-**Version:** *5.2.9*
+**Version:** *5.2.10*
 
 This document describes integration of the Blesh iOS SDK with your iOS application.
 
@@ -10,59 +10,62 @@ Blesh iOS SDK collects location information from a device on which the iOS appli
 
 ## Changelog
 
-  * **5.2.9** *(Released 11/22/2021)*
+  * **5.2.10** *(Released 2022-03-22)*
+    * Added arm64 support for simulator
+
+  * **5.2.9** *(Released 2021-11-22)*
     * Updated the Swift compiler to 5.5
 
-  * **5.2.8** *(Released 09/22/2021)*
+  * **5.2.8** *(Released 2021-09-22)*
     * Updated the Swift compiler to 5.4
 
-  * **5.2.7** *(Released 05/04/2021)*
+  * **5.2.7** *(Released 2021-05-04)*
     * Released as xcframework
 
-  * **5.2.6** *(Released 10/05/2020)*
+  * **5.2.6** *(Released 2020-10-05)*
     * Updated the Swift compiler to 5.3
 
-  * **5.2.5** *(Released 07/27/2020)*
+  * **5.2.5** *(Released 2020-07-27)*
     * Updated the Swift compiler to 5.1
 
-  * **5.2.4** *(Released 07/27/2020)*
+  * **5.2.4** *(Released 2020-07-27)*
     * Enhanced rendering
 
-  * **5.2.3** *(Released 05/20/2020)*
+  * **5.2.3** *(Released 2020-05-20)*
     * Added archived version of the SDK
 
-  * **5.2.2** *(Released 05/18/2020)*
+  * **5.2.2** *(Released 2020-05-18)*
     * Enabled bitcode for all architectures
 
-  * **5.2.1** *(Released 05/08/2020)*
+  * **5.2.1** *(Released 2020-05-08)*
     * Added support for custom background layers
 
-  * **5.2.0** *(Released 05/02/2020)*
+  * **5.2.0** *(Released 2020-05-02)*
     * Updated the Swift compiler to 5.2
 
-  * **5.1.5** *(Released 04/18/2020)*
+  * **5.1.5** *(Released 2020-04-18)*
     * Enabled bitcode
 
-  * **5.1.4** *(Released 01/20/2020)*
+  * **5.1.4** *(Released 2020-01-20)*
     * Changed the Swift compiler to 5
 
-  * **5.1.3** *(Released 01/07/2020)*
+  * **5.1.3** *(Released 2020-01-07)*
     * Improved iOS 13 compatibility
 
-  * **5.1.2** *(Released 01/07/2020)*
+  * **5.1.2** *(Released 2020-01-07)*
     * Improved iOS 13 compatibility
 
-  * **5.1.1** *(Released 01/06/2020)*
+  * **5.1.1** *(Released 2020-01-06)*
     * Added English and Turkish localizations
 
-  * **5.1.0** *(Released 12/27/2019)*
+  * **5.1.0** *(Released 2019-12-27)*
     * Added local push notification support
     * Added more location handlers
 
-  * **5.0.1** *(Released 11/28/2019)*
+  * **5.0.1** *(Released 2019-11-28)*
     * Removed Core Bluetooth framework
 
-  * **5.0.0** *(Released 11/26/2019)*
+  * **5.0.0** *(Released 2019-11-26)*
     * Added initialization support
     * Added callback handler for handling changes in the location permission
     * Supported server-side HTTP compression
@@ -89,7 +92,7 @@ The Blesh iOS SDK can be added either by using CocoaPods or manually.
 
 #### 1.1. Adding the Blesh iOS SDK with CocoaPods
 
-Referencing the `BleshSDK` pod with version `5.2.9` in the `Podfile` will be sufficient to add the Blesh iOS SDK to your project.
+Referencing the `BleshSDK` pod with version `5.2.10` in the `Podfile` will be sufficient to add the Blesh iOS SDK to your project.
 
 **Steps to add:**
 
@@ -106,7 +109,7 @@ target 'YOUR_APPLICATION_NAME' do
 
   # ... beginning of your Podfile ...
 
-  pod 'BleshSDK', :git => 'https://github.com/bleshcom/Blesh-iOS-SDK.git', :tag => '5.2.9' # this will reference the Blesh iOS SDK 5
+  pod 'BleshSDK', :git => 'https://github.com/bleshcom/Blesh-iOS-SDK.git', :tag => '5.2.10' # this will reference the Blesh iOS SDK 5
 
   # ... remaining of your Podfile ...
 
