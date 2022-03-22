@@ -92,7 +92,7 @@ The Blesh iOS SDK can be added either by using CocoaPods or manually.
 
 #### 1.1. Adding the Blesh iOS SDK with CocoaPods
 
-Referencing the `BleshSDK` pod with version `5.2.10` in the `Podfile` will be sufficient to add the Blesh iOS SDK to your project.
+Referencing the `BleshSDK` pod in the `Podfile` will be sufficient to add the Blesh iOS SDK to your project.
 
 **Steps to add:**
 
@@ -109,7 +109,7 @@ target 'YOUR_APPLICATION_NAME' do
 
   # ... beginning of your Podfile ...
 
-  pod 'BleshSDK', :git => 'https://github.com/bleshcom/Blesh-iOS-SDK.git', :tag => '5.2.10' # this will reference the Blesh iOS SDK 5
+  pod 'BleshSDK' # this will reference the Blesh iOS SDK 5
 
   # ... remaining of your Podfile ...
 
