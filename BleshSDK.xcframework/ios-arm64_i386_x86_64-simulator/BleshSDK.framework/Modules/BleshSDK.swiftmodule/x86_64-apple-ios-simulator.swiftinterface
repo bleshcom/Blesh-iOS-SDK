@@ -13,6 +13,10 @@ import UIKit
 import UserNotifications
 import WebKit
 import _Concurrency
+@_hasMissingDesignatedInitializers @objc public class BleshRentalFinishedEvent : BleshSDK.BleshEvent {
+  public init(userId: Swift.String, assetId: Swift.String)
+  @objc deinit
+}
 @objc public class BleshSdkApplicationUser : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(userId: Swift.String?, genderCode: Foundation.NSNumber?, yearOfBirth: Foundation.NSNumber?, email: Swift.String?, phoneNumber: Swift.String?, other: Swift.Dictionary<Swift.String, Swift.String>?)
   public init(userId: Swift.String?, gender: BleshSDK.BleshSdkApplicationUserGender?, yearOfBirth: Swift.Int?, email: Swift.String?, phoneNumber: Swift.String?, other: Swift.Dictionary<Swift.String, Swift.String>?)
@@ -47,12 +51,26 @@ import _Concurrency
   @objc public func start(withApplicationUser applicationUser: BleshSDK.BleshSdkApplicationUser? = nil, withConfiguration configuration: BleshSDK.BleshSdkConfiguration? = nil, completionHandler: ((BleshSDK.BleshSdkStartState) -> Swift.Void)? = nil)
   @objc public func stop()
   @objc public func restart()
+  @objc public func trackEvent(event: BleshSDK.BleshEvent, callback: ((BleshSDK.BleshSdkEventTrackingError?) -> Swift.Void)?)
   @objc public func didChangeLocationAuthorization(_ status: CoreLocation.CLAuthorizationStatus)
   @objc public func didChangeNotificationAuthorization(_ granted: Swift.Bool)
   @available(iOS 10, *)
   @objc public func didReceiveUNNotificationResponse(_ response: UserNotifications.UNNotificationResponse)
   @objc public func didReceiveLocalNotification(_ notification: UIKit.UILocalNotification)
   @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class BleshSdkEventTrackingError : ObjectiveC.NSObject, Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class BleshUserLoggedOutEvent : BleshSDK.BleshEvent {
+  public init(userId: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class BleshEvent : ObjectiveC.NSObject, Swift.Encodable {
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
 }
 @objc public enum BleshSdkApplicationUserGender : Swift.Int {
   case female = 0
@@ -62,6 +80,10 @@ import _Concurrency
   public var rawValue: Swift.Int {
     get
   }
+}
+@_hasMissingDesignatedInitializers @objc public class BleshRentalCreatedEvent : BleshSDK.BleshEvent {
+  public init(userId: Swift.String, assetId: Swift.String)
+  @objc deinit
 }
 public enum ReachabilityError : Swift.Error {
   case FailedToCreateWithAddress(Darwin.sockaddr_in)
@@ -145,11 +167,19 @@ extension BleshSDK.Reachability {
   @objc optional func bleshSdk(_ sdk: BleshSDK.BleshSdk, didCompleteStartWith state: BleshSDK.BleshSdkStartState)
   @objc optional func bleshSdk(_ sdk: BleshSDK.BleshSdk, willDisplayNotification notificationId: Swift.String) -> Swift.Bool
 }
+@_hasMissingDesignatedInitializers @objc public class BleshUserLoggedInEvent : BleshSDK.BleshEvent {
+  public init(userId: Swift.String)
+  @objc deinit
+}
 @objc public class BleshSdkConfiguration : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(testMode: Swift.Bool = false, adsEnabled: Swift.Bool = true)
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class BleshRentalStartedEvent : BleshSDK.BleshEvent {
+  public init(userId: Swift.String, assetId: Swift.String)
+  @objc deinit
 }
 extension BleshSDK.BleshSdkStartState : Swift.Equatable {}
 extension BleshSDK.BleshSdkStartState : Swift.Hashable {}

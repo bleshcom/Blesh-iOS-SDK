@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "BleshSDK"
-    s.version          = "5.2.10"
+    s.version          = "5.3.0"
     s.summary       = "Blesh iOS SDK"
     s.homepage     = "https://blesh.com"
     s.author           = { "Blesh Technology Team" => "technology@blesh.com" }

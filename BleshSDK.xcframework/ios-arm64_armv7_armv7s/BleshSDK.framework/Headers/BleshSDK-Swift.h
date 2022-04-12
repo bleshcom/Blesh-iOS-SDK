@@ -210,11 +210,34 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+
+SWIFT_CLASS("_TtC8BleshSDK10BleshEvent")
+@interface BleshEvent : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8BleshSDK23BleshRentalCreatedEvent")
+@interface BleshRentalCreatedEvent : BleshEvent
+@end
+
+
+SWIFT_CLASS("_TtC8BleshSDK24BleshRentalFinishedEvent")
+@interface BleshRentalFinishedEvent : BleshEvent
+@end
+
+
+SWIFT_CLASS("_TtC8BleshSDK23BleshRentalStartedEvent")
+@interface BleshRentalStartedEvent : BleshEvent
+@end
+
 @protocol BleshSdkDelegate;
 @class NSNumber;
 @class BleshSdkApplicationUser;
 @class BleshSdkConfiguration;
 enum BleshSdkStartState : NSInteger;
+@class BleshSdkEventTrackingError;
 @class UNNotificationResponse;
 @class UILocalNotification;
 
@@ -229,6 +252,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BleshSdk * _
 - (void)startWithApplicationUser:(BleshSdkApplicationUser * _Nullable)applicationUser withConfiguration:(BleshSdkConfiguration * _Nullable)configuration completionHandler:(void (^ _Nullable)(enum BleshSdkStartState))completionHandler;
 - (void)stop;
 - (void)restart;
+- (void)trackEventWithEvent:(BleshEvent * _Nonnull)event callback:(void (^ _Nullable)(BleshSdkEventTrackingError * _Nullable))callback;
 - (void)didChangeLocationAuthorization:(CLAuthorizationStatus)status;
 - (void)didChangeNotificationAuthorization:(BOOL)granted;
 - (void)didReceiveUNNotificationResponse:(UNNotificationResponse * _Nonnull)response SWIFT_AVAILABILITY(ios,introduced=10);
@@ -265,11 +289,28 @@ SWIFT_PROTOCOL("_TtP8BleshSDK16BleshSdkDelegate_")
 - (BOOL)bleshSdk:(BleshSdk * _Nonnull)sdk willDisplayNotification:(NSString * _Nonnull)notificationId SWIFT_WARN_UNUSED_RESULT;
 @end
 
+
+SWIFT_CLASS("_TtC8BleshSDK26BleshSdkEventTrackingError")
+@interface BleshSdkEventTrackingError : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 typedef SWIFT_ENUM(NSInteger, BleshSdkStartState, open) {
   BleshSdkStartStateFailure = 0,
   BleshSdkStartStateSuccess = 1,
   BleshSdkStartStateSkipped = 2,
 };
+
+
+SWIFT_CLASS("_TtC8BleshSDK22BleshUserLoggedInEvent")
+@interface BleshUserLoggedInEvent : BleshEvent
+@end
+
+
+SWIFT_CLASS("_TtC8BleshSDK23BleshUserLoggedOutEvent")
+@interface BleshUserLoggedOutEvent : BleshEvent
+@end
 
 
 #if __has_attribute(external_source_symbol)
@@ -489,11 +530,34 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+
+SWIFT_CLASS("_TtC8BleshSDK10BleshEvent")
+@interface BleshEvent : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8BleshSDK23BleshRentalCreatedEvent")
+@interface BleshRentalCreatedEvent : BleshEvent
+@end
+
+
+SWIFT_CLASS("_TtC8BleshSDK24BleshRentalFinishedEvent")
+@interface BleshRentalFinishedEvent : BleshEvent
+@end
+
+
+SWIFT_CLASS("_TtC8BleshSDK23BleshRentalStartedEvent")
+@interface BleshRentalStartedEvent : BleshEvent
+@end
+
 @protocol BleshSdkDelegate;
 @class NSNumber;
 @class BleshSdkApplicationUser;
 @class BleshSdkConfiguration;
 enum BleshSdkStartState : NSInteger;
+@class BleshSdkEventTrackingError;
 @class UNNotificationResponse;
 @class UILocalNotification;
 
@@ -508,6 +572,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BleshSdk * _
 - (void)startWithApplicationUser:(BleshSdkApplicationUser * _Nullable)applicationUser withConfiguration:(BleshSdkConfiguration * _Nullable)configuration completionHandler:(void (^ _Nullable)(enum BleshSdkStartState))completionHandler;
 - (void)stop;
 - (void)restart;
+- (void)trackEventWithEvent:(BleshEvent * _Nonnull)event callback:(void (^ _Nullable)(BleshSdkEventTrackingError * _Nullable))callback;
 - (void)didChangeLocationAuthorization:(CLAuthorizationStatus)status;
 - (void)didChangeNotificationAuthorization:(BOOL)granted;
 - (void)didReceiveUNNotificationResponse:(UNNotificationResponse * _Nonnull)response SWIFT_AVAILABILITY(ios,introduced=10);
@@ -544,11 +609,28 @@ SWIFT_PROTOCOL("_TtP8BleshSDK16BleshSdkDelegate_")
 - (BOOL)bleshSdk:(BleshSdk * _Nonnull)sdk willDisplayNotification:(NSString * _Nonnull)notificationId SWIFT_WARN_UNUSED_RESULT;
 @end
 
+
+SWIFT_CLASS("_TtC8BleshSDK26BleshSdkEventTrackingError")
+@interface BleshSdkEventTrackingError : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 typedef SWIFT_ENUM(NSInteger, BleshSdkStartState, open) {
   BleshSdkStartStateFailure = 0,
   BleshSdkStartStateSuccess = 1,
   BleshSdkStartStateSkipped = 2,
 };
+
+
+SWIFT_CLASS("_TtC8BleshSDK22BleshUserLoggedInEvent")
+@interface BleshUserLoggedInEvent : BleshEvent
+@end
+
+
+SWIFT_CLASS("_TtC8BleshSDK23BleshUserLoggedOutEvent")
+@interface BleshUserLoggedOutEvent : BleshEvent
+@end
 
 
 #if __has_attribute(external_source_symbol)
@@ -768,11 +850,34 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+
+SWIFT_CLASS("_TtC8BleshSDK10BleshEvent")
+@interface BleshEvent : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8BleshSDK23BleshRentalCreatedEvent")
+@interface BleshRentalCreatedEvent : BleshEvent
+@end
+
+
+SWIFT_CLASS("_TtC8BleshSDK24BleshRentalFinishedEvent")
+@interface BleshRentalFinishedEvent : BleshEvent
+@end
+
+
+SWIFT_CLASS("_TtC8BleshSDK23BleshRentalStartedEvent")
+@interface BleshRentalStartedEvent : BleshEvent
+@end
+
 @protocol BleshSdkDelegate;
 @class NSNumber;
 @class BleshSdkApplicationUser;
 @class BleshSdkConfiguration;
 enum BleshSdkStartState : NSInteger;
+@class BleshSdkEventTrackingError;
 @class UNNotificationResponse;
 @class UILocalNotification;
 
@@ -787,6 +892,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BleshSdk * _
 - (void)startWithApplicationUser:(BleshSdkApplicationUser * _Nullable)applicationUser withConfiguration:(BleshSdkConfiguration * _Nullable)configuration completionHandler:(void (^ _Nullable)(enum BleshSdkStartState))completionHandler;
 - (void)stop;
 - (void)restart;
+- (void)trackEventWithEvent:(BleshEvent * _Nonnull)event callback:(void (^ _Nullable)(BleshSdkEventTrackingError * _Nullable))callback;
 - (void)didChangeLocationAuthorization:(CLAuthorizationStatus)status;
 - (void)didChangeNotificationAuthorization:(BOOL)granted;
 - (void)didReceiveUNNotificationResponse:(UNNotificationResponse * _Nonnull)response SWIFT_AVAILABILITY(ios,introduced=10);
@@ -823,11 +929,28 @@ SWIFT_PROTOCOL("_TtP8BleshSDK16BleshSdkDelegate_")
 - (BOOL)bleshSdk:(BleshSdk * _Nonnull)sdk willDisplayNotification:(NSString * _Nonnull)notificationId SWIFT_WARN_UNUSED_RESULT;
 @end
 
+
+SWIFT_CLASS("_TtC8BleshSDK26BleshSdkEventTrackingError")
+@interface BleshSdkEventTrackingError : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 typedef SWIFT_ENUM(NSInteger, BleshSdkStartState, open) {
   BleshSdkStartStateFailure = 0,
   BleshSdkStartStateSuccess = 1,
   BleshSdkStartStateSkipped = 2,
 };
+
+
+SWIFT_CLASS("_TtC8BleshSDK22BleshUserLoggedInEvent")
+@interface BleshUserLoggedInEvent : BleshEvent
+@end
+
+
+SWIFT_CLASS("_TtC8BleshSDK23BleshUserLoggedOutEvent")
+@interface BleshUserLoggedOutEvent : BleshEvent
+@end
 
 
 #if __has_attribute(external_source_symbol)
