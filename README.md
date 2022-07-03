@@ -1,6 +1,6 @@
 # Blesh iOS SDK 5 Developer Guide
 
-**Version:** *5.3.0*
+**Version:** *5.4.0*
 
 This document describes integration of the Blesh iOS SDK with your iOS application.
 
@@ -9,6 +9,11 @@ This document describes integration of the Blesh iOS SDK with your iOS applicati
 Blesh iOS SDK collects location information from a device on which the iOS application is installed. Blesh Ads Platform uses this data for creating and enhancing audiences, serving targeted ads, and insights generation.
 
 ## Changelog
+
+  * **5.4.0** *(Released 2022-07-03)*
+    * Added beacon scanning
+    * Added remote push notifications
+    * Added motion activity transitions
 
   * **5.3.0** *(Released 2022-04-12)*
     * Added in-app behavior tracking

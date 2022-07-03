@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target arm64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BleshSDK
 import AdSupport
 @_exported import BleshSDK
@@ -47,6 +47,9 @@ import _Concurrency
     @objc get
     @objc set(new)
   }
+  @objc public var pushNotificationToken: Swift.String {
+    @objc get
+  }
   @objc override dynamic public init()
   @objc public func start(withApplicationUser applicationUser: BleshSDK.BleshSdkApplicationUser? = nil, withConfiguration configuration: BleshSDK.BleshSdkConfiguration? = nil, completionHandler: ((BleshSDK.BleshSdkStartState) -> Swift.Void)? = nil)
   @objc public func stop()
@@ -54,9 +57,12 @@ import _Concurrency
   @objc public func trackEvent(event: BleshSDK.BleshEvent, callback: ((BleshSDK.BleshSdkEventTrackingError?) -> Swift.Void)?)
   @objc public func didChangeLocationAuthorization(_ status: CoreLocation.CLAuthorizationStatus)
   @objc public func didChangeNotificationAuthorization(_ granted: Swift.Bool)
+  @objc public func didReceiveDeviceToken(_ deviceToken: Foundation.Data)
   @available(iOS 10, *)
   @objc public func didReceiveUNNotificationResponse(_ response: UserNotifications.UNNotificationResponse)
   @objc public func didReceiveLocalNotification(_ notification: UIKit.UILocalNotification)
+  @objc public func didReceiveRemoteNotification(_ userInfo: [Swift.AnyHashable : Any])
+  @objc public func didReceiveRemoteNotification(_ userInfo: [Swift.AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class BleshSdkEventTrackingError : ObjectiveC.NSObject, Swift.Codable {
@@ -172,7 +178,7 @@ extension BleshSDK.Reachability {
   @objc deinit
 }
 @objc public class BleshSdkConfiguration : ObjectiveC.NSObject, Swift.Codable {
-  @objc public init(testMode: Swift.Bool = false, adsEnabled: Swift.Bool = true)
+  @objc public init(testMode: Swift.Bool = false, adsEnabled: Swift.Bool = true, pushNotificationToken: Swift.String = "")
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
