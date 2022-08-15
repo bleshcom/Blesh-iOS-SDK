@@ -1,6 +1,6 @@
 # Blesh iOS SDK 5 Developer Guide
 
-**Version:** *5.4.0*
+**Version:** *5.4.1*
 
 This document describes integration of the Blesh iOS SDK with your iOS application.
 
@@ -9,6 +9,10 @@ This document describes integration of the Blesh iOS SDK with your iOS applicati
 Blesh iOS SDK collects location information from a device on which the iOS application is installed. Blesh Ads Platform uses this data for creating and enhancing audiences, serving targeted ads, and insights generation.
 
 ## Changelog
+
+  * **5.4.1** *(Released 2022-08-15)*
+    * Updated the Swift compiler to 5.6
+    * Made start(withSecretKey ...) method public again
 
   * **5.4.0** *(Released 2022-07-03)*
     * Added beacon scanning
@@ -79,6 +83,8 @@ Blesh iOS SDK collects location information from a device on which the iOS appli
     * Supported server-side HTTP compression
     * Compiled as a Mac-O Universal binary
 
+<div style="page-break-after: always;"></div>
+
 ## Requirements
 
 In order to integrate the Blesh iOS SDK make sure you are:
@@ -125,6 +131,8 @@ end
 ```
 
 > **Note:** Replace `YOUR_APPLICATION_NAME` with the name of your application in the `target` section
+
+<div style="page-break-after: always;"></div>
 
 3. Install pods by running the following command on the terminal:
 
@@ -296,6 +304,8 @@ Blesh iOS SDK requires the **Blesh Ads Platform Access Key**. You may need to cr
 <string>YOUR_SECRET_KEY_HERE</string>
 ```
 
+Alternatively, you can provide the **Blesh Ads Platform Access Key** via the SDK `start` method as documented in the next section. 
+
 ### 2. Starting the Blesh iOS SDK
 
 You can either create & manage a new instance of `BleshSdk` or you can access the `BleshSdk` singleton instance through `BleshSdk.sharedInstance`.
@@ -308,10 +318,13 @@ In order to continue to receive notifications even when the app is **killed/not 
 
 ```swift
 start(
+      withSecretKey secretKey: String?,
       withApplicationUser: BleshSdkApplicationUser?,
       withConfiguration: BleshSdkConfiguration?,
       completionHandler: ((BleshSdkStartState) -> Void)?)
 ```
+
+* If you do not choose to utilize the `Info.plist` file to define the **Blesh Ads Platform Access Key**, you may optionally pass it using the `withSecretKey` parameter.
 
 * `withApplicationUser` parameter allows you to enchance the audience data by providing information about the primary user (subscriber) of your application. You can give any information which makes the subscriber unique in your application's understanding. The `BleshSdkApplicationUser` class contains the following:
 

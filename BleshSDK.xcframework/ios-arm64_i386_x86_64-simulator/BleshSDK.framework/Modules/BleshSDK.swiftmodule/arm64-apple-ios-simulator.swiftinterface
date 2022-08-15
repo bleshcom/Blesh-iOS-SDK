@@ -52,6 +52,7 @@ import _Concurrency
   }
   @objc override dynamic public init()
   @objc public func start(withApplicationUser applicationUser: BleshSDK.BleshSdkApplicationUser? = nil, withConfiguration configuration: BleshSDK.BleshSdkConfiguration? = nil, completionHandler: ((BleshSDK.BleshSdkStartState) -> Swift.Void)? = nil)
+  @objc public func start(withSecretKey secretKey: Swift.String? = nil, withApplicationUser applicationUser: BleshSDK.BleshSdkApplicationUser? = nil, withConfiguration configuration: BleshSDK.BleshSdkConfiguration? = nil, completionHandler: ((BleshSDK.BleshSdkStartState) -> Swift.Void)? = nil)
   @objc public func stop()
   @objc public func restart()
   @objc public func trackEvent(event: BleshSDK.BleshEvent, callback: ((BleshSDK.BleshSdkEventTrackingError?) -> Swift.Void)?)

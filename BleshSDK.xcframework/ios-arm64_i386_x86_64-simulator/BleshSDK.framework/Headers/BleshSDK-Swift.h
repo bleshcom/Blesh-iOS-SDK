@@ -260,6 +260,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BleshSdk * _
 @property (nonatomic, readonly, copy) NSString * _Nonnull pushNotificationToken;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)startWithApplicationUser:(BleshSdkApplicationUser * _Nullable)applicationUser withConfiguration:(BleshSdkConfiguration * _Nullable)configuration completionHandler:(void (^ _Nullable)(enum BleshSdkStartState))completionHandler;
+- (void)startWithSecretKey:(NSString * _Nullable)secretKey withApplicationUser:(BleshSdkApplicationUser * _Nullable)applicationUser withConfiguration:(BleshSdkConfiguration * _Nullable)configuration completionHandler:(void (^ _Nullable)(enum BleshSdkStartState))completionHandler;
 - (void)stop;
 - (void)restart;
 - (void)trackEventWithEvent:(BleshEvent * _Nonnull)event callback:(void (^ _Nullable)(BleshSdkEventTrackingError * _Nullable))callback;
@@ -593,6 +594,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BleshSdk * _
 @property (nonatomic, readonly, copy) NSString * _Nonnull pushNotificationToken;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)startWithApplicationUser:(BleshSdkApplicationUser * _Nullable)applicationUser withConfiguration:(BleshSdkConfiguration * _Nullable)configuration completionHandler:(void (^ _Nullable)(enum BleshSdkStartState))completionHandler;
+- (void)startWithSecretKey:(NSString * _Nullable)secretKey withApplicationUser:(BleshSdkApplicationUser * _Nullable)applicationUser withConfiguration:(BleshSdkConfiguration * _Nullable)configuration completionHandler:(void (^ _Nullable)(enum BleshSdkStartState))completionHandler;
 - (void)stop;
 - (void)restart;
 - (void)trackEventWithEvent:(BleshEvent * _Nonnull)event callback:(void (^ _Nullable)(BleshSdkEventTrackingError * _Nullable))callback;
@@ -926,6 +928,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BleshSdk * _
 @property (nonatomic, readonly, copy) NSString * _Nonnull pushNotificationToken;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)startWithApplicationUser:(BleshSdkApplicationUser * _Nullable)applicationUser withConfiguration:(BleshSdkConfiguration * _Nullable)configuration completionHandler:(void (^ _Nullable)(enum BleshSdkStartState))completionHandler;
+- (void)startWithSecretKey:(NSString * _Nullable)secretKey withApplicationUser:(BleshSdkApplicationUser * _Nullable)applicationUser withConfiguration:(BleshSdkConfiguration * _Nullable)configuration completionHandler:(void (^ _Nullable)(enum BleshSdkStartState))completionHandler;
 - (void)stop;
 - (void)restart;
 - (void)trackEventWithEvent:(BleshEvent * _Nonnull)event callback:(void (^ _Nullable)(BleshSdkEventTrackingError * _Nullable))callback;
