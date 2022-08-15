@@ -318,7 +318,7 @@ In order to continue to receive notifications even when the app is **killed/not 
 
 ```swift
 start(
-      withSecretKey secretKey: String?,
+      withSecretKey: String?,
       withApplicationUser: BleshSdkApplicationUser?,
       withConfiguration: BleshSdkConfiguration?,
       completionHandler: ((BleshSdkStartState) -> Void)?)
