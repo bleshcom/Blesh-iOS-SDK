@@ -1,6 +1,6 @@
 # Blesh iOS SDK 5 Developer Guide
 
-**Version:** *5.4.1*
+**Version:** *5.4.2*
 
 This document describes integration of the Blesh iOS SDK with your iOS application.
 
@@ -9,6 +9,9 @@ This document describes integration of the Blesh iOS SDK with your iOS applicati
 Blesh iOS SDK collects location information from a device on which the iOS application is installed. Blesh Ads Platform uses this data for creating and enhancing audiences, serving targeted ads, and insights generation.
 
 ## Changelog
+
+  * **5.4.2** *(Released 2022-08-26)*
+    * Added initializers for backwards compatibility
 
   * **5.4.1** *(Released 2022-08-15)*
     * Updated the Swift compiler to 5.6
@@ -217,6 +220,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 }
 ```
 
+**Example:** Objective-C (AppDelegate.h)
+
+```objective-c
+#import <UserNotifications/UserNotifications.h>
+// ... rest of imports ...
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UNUserNotificationCenterDelegate>
+
+// ... rest of the interface ...
+
+@end
+```
+
+**Example:** Objective-C (AppDelegate.m)
+
+```objective-c
+#import <BleshSDK/BleshSDK.h>
+// ... rest of imports ...
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // mark this class as a UNUserNotificationCenterDelegate
+    if (@available(iOS 10, *)) {
+      [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
+    }
+
+    // ... rest of the method ...
+
+    return YES;
+}
+
+// this method will be called when app received push notifications in foreground
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+       willPresentNotification:(UNNotification *)notification
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
+{
+  completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionSound | UNNotificationPresentationOptionBadge);
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler
+{
+  [[BleshSdk sharedInstance] didReceiveUNNotificationResponse:response];
+
+  completionHandler();
+}
+
+// ... rest of the class ...
+
+@end
+```
+
 ### 3. Adding Frameworks
 
 Blesh iOS SDK utilizes following frameworks. Please make sure that your project references all of them:
@@ -312,9 +367,9 @@ You can either create & manage a new instance of `BleshSdk` or you can access th
 
 In order to continue to receive notifications even when the app is **killed/not running in the background**, invoking `start` method should not require the application to be in the foreground. Please note that best practice is starting Blesh under **applicationDidFinishLaunchingWithOptions** in the app delegate.
 
-#### Swift
+`BleshSdk` contains following `start` methods:
 
-`BleshSdk` contains the following `start` method:
+**Swift:**
 
 ```swift
 start(
@@ -324,18 +379,31 @@ start(
       completionHandler: ((BleshSdkStartState) -> Void)?)
 ```
 
+**Objective-C:**
+
+```objective-c
+- (void)startWithApplicationUser:(BleshSdkApplicationUser *)applicationUser 
+               withConfiguration:(BleshSdkConfiguration *)configuration 
+               completionHandler:(void (^)(enum BleshSdkStartState))completionHandler;
+
+- (void)startWithSecretKey:(NSString *)secretKey 
+       withApplicationUser:(BleshSdkApplicationUser *)applicationUser 
+         withConfiguration:(BleshSdkConfiguration *)configuration 
+         completionHandler:(void (^)(enum BleshSdkStartState))completionHandler;
+```
+
 * If you do not choose to utilize the `Info.plist` file to define the **Blesh Ads Platform Access Key**, you may optionally pass it using the `withSecretKey` parameter.
 
 * `withApplicationUser` parameter allows you to enchance the audience data by providing information about the primary user (subscriber) of your application. You can give any information which makes the subscriber unique in your application's understanding. The `BleshSdkApplicationUser` class contains the following:
 
-| Property    | Type                           | Description                                    | Example              |
-|-------------|--------------------------------|------------------------------------------------|----------------------|
-| userId      | String?                        | Optional unique identifier of the user         | 42                   |
-| gender      | BleshSdkApplicationUserGender? | Optional gender of the user (.female or .male) | .female              |
-| yearOfBirth | Int?                           | Optional year of birth of the user             | 1999                 |
-| email       | String?                        | Optional email address of the user             | jane.doe@example.com |
-| phoneNumber | String?                        | Optional mobile phone number of the user       | +905550000000        |
-| other       | Dictionary<String, String>?    | Optional extra information for the user        | nil                  |
+| Description                                    | Swift Property                         | Objective-C Property                          | Example                   |
+|------------------------------------------------|----------------------------------------|-----------------------------------------------|---------------------------|
+| Optional unique identifier of the user         | userId: String?                        | (NSString *)userId                            | 42                        |
+| Optional gender of the user (.female or .male) | gender: BleshSdkApplicationUserGender? | (NSNumber *)genderCode                        | .female (Swift) 0 (Obj-c) |
+| Optional year of birth of the user             | yearOfBirth: Int?                      | (NSNumber *)yearOfBirth                       | 1999                      |
+| Optional email address of the user             | email: String?                         | (NSString *)email                             | jane.doe@example.com      |
+| Optional mobile phone number of the user       | phoneNumber: String?                   | (NSString *)phoneNumber                       | +905550000000             |
+| Optional extra information for the user        | other: Dictionary<String,String>?      | (NSDictionary<NSString *, NSString *> *)other |                           |
 
 > **Note:** `email` and `phoneNumber` details are never sent in plain-text to the *Blesh Ads Platform*. These values are always irreversibly hashed so that no personally identifiable information is stored.
 
@@ -353,13 +421,23 @@ start(
 
 You can start the Blesh iOS SDK by simply invoking the `start` method of the shared instance:
 
+**Swift:**
+
 ```swift
 BleshSdk.sharedInstance.start()
+```
+
+**Objective-C:**
+
+```objective-c
+[[BleshSdk sharedInstance] start];
 ```
 
 ##### Example: Simple Initialization
 
 You can start the Blesh iOS SDK by simply invoking the `start` method of the instance:
+
+**Swift:**
 
 ```swift
 let bleshSdk = BleshSdk()
@@ -367,7 +445,16 @@ let bleshSdk = BleshSdk()
 bleshSdk.start()
 ```
 
+**Objective-C:**
+
+```objective-c
+BleshSdk* bleshSdk = [[BleshSdk alloc] init];
+[bleshSdk start];
+```
+
 ##### Example: Complete Initialization
+
+**Swift:**
 
 ```swift
 let bleshSdkConfiguration = BleshSdkConfiguration(
@@ -392,15 +479,43 @@ BleshSdk.sharedInstance.start(
 	}
 ```
 
+**Objective-C:**
+
+```objective-c
+BleshSdkConfiguration *configuration = [[BleshSdkConfiguration alloc]
+                                        initWithTestMode:false
+                                        adsEnabled:true
+                                        pushNotificationToken:@""];
+
+BleshSdkApplicationUser *user = [[BleshSdkApplicationUser alloc] initWithUserId:@"42"
+                                      genderCode:0 // 0: female 1: male
+                                      yearOfBirth:@1999
+                                      email:@"jane.doe@example.com"
+                                      phoneNumber:@"+905550000000"
+                                      other:nil];
+
+[[BleshSdk sharedInstance] startWithApplicationUser:user
+                                  withConfiguration:configuration
+                                  completionHandler:^(enum BleshSdkStartState state) {
+    // ... INSERT BUSINESS LOGIC HERE ...
+    if (state == BleshSdkStartStateFailure) {
+        NSLog(@"BleshSDK start completed: failure");
+    } else if (state == BleshSdkStartStateSkipped) {
+        NSLog(@"BleshSDK start completed: skipped");
+    } else {
+        NSLog(@"BleshSDK start completed: success");
+    }
+}];
+
+```
+
 ### 3. Notifying the Blesh iOS SDK About Changes in Permissions
 
 Starting from Blesh iOS SDK 4.0.7, the SDK does not ask the user for permissions. Your application needs to ask location permissions. See "[Reviewing Permissions](#3-reviewing-permissions)" section for more information.
 
-#### Swift
-
 When the location permission changes, your application should call the `didChangeLocationAuthorization` method of `BleshSdk` with the new status.
 
-**Example:**
+**Example:** Swift
 
 ```swift
 import UIKit
@@ -437,6 +552,56 @@ class MyViewController: UIViewController, CLLocationManagerDelegate {
 }
 ```
 
+**Example:** Objective-C (ViewController.h)
+
+```objective-c
+#import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <BleshSDK/BleshSDK.h>
+// ... rest of imports ...
+
+@interface ViewController : UIViewController<CLLocationManagerDelegate>
+{
+    CLLocationManager *locationManager;
+}
+
+// ... rest of the interface ...
+
+@end
+```
+
+**Example:** Objective-C (ViewController.m)
+
+```objective-c
+#import "ViewController.h"
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    locationManager.delegate = self;
+    locationManager.distanceFilter = 10;
+    [locationManager requestAlwaysAuthorization];
+    [locationManager requestLocation];
+
+    // ... rest of the method ...
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    // Notify the Blesh iOS SDK about the change here
+    [[BleshSdk sharedInstance] didChangeLocationAuthorization:status];
+
+    // ... rest of the method ...
+}
+
+// ... rest of the class ...
+
+@end
+```
+
 ### 4. Implementing the Blesh iOS SDK Delegate 
 
 Blesh iOS SDK allows you to decide whether or not to display an ad. Following optional methods are provided by the `BleshSdkDelegate` protocol:
@@ -446,7 +611,7 @@ optional func bleshSdk(_ sdk: BleshSdk, didCompleteStartWith state: BleshSdkStar
 optional func bleshSdk(_ sdk: BleshSdk, willDisplayNotification notificationId: String) -> Bool
 ```
 
-**Example:**
+**Example:** Swift
 
 ```swift
 import UIKit

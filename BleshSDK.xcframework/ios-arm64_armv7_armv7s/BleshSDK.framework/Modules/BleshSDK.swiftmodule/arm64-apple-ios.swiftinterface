@@ -51,6 +51,7 @@ import _Concurrency
     @objc get
   }
   @objc override dynamic public init()
+  @objc public func start()
   @objc public func start(withApplicationUser applicationUser: BleshSDK.BleshSdkApplicationUser? = nil, withConfiguration configuration: BleshSDK.BleshSdkConfiguration? = nil, completionHandler: ((BleshSDK.BleshSdkStartState) -> Swift.Void)? = nil)
   @objc public func start(withSecretKey secretKey: Swift.String? = nil, withApplicationUser applicationUser: BleshSDK.BleshSdkApplicationUser? = nil, withConfiguration configuration: BleshSDK.BleshSdkConfiguration? = nil, completionHandler: ((BleshSDK.BleshSdkStartState) -> Swift.Void)? = nil)
   @objc public func stop()
@@ -179,6 +180,7 @@ extension BleshSDK.Reachability {
   @objc deinit
 }
 @objc public class BleshSdkConfiguration : ObjectiveC.NSObject, Swift.Codable {
+  @objc public init(testMode: Swift.Bool = false, adsEnabled: Swift.Bool = true)
   @objc public init(testMode: Swift.Bool = false, adsEnabled: Swift.Bool = true, pushNotificationToken: Swift.String = "")
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws

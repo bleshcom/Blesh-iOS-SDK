@@ -259,6 +259,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BleshSdk * _
 @property (nonatomic) BOOL adsEnabled;
 @property (nonatomic, readonly, copy) NSString * _Nonnull pushNotificationToken;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)start;
 - (void)startWithApplicationUser:(BleshSdkApplicationUser * _Nullable)applicationUser withConfiguration:(BleshSdkConfiguration * _Nullable)configuration completionHandler:(void (^ _Nullable)(enum BleshSdkStartState))completionHandler;
 - (void)startWithSecretKey:(NSString * _Nullable)secretKey withApplicationUser:(BleshSdkApplicationUser * _Nullable)applicationUser withConfiguration:(BleshSdkConfiguration * _Nullable)configuration completionHandler:(void (^ _Nullable)(enum BleshSdkStartState))completionHandler;
 - (void)stop;
@@ -290,6 +291,7 @@ typedef SWIFT_ENUM(NSInteger, BleshSdkApplicationUserGender, open) {
 
 SWIFT_CLASS("_TtC8BleshSDK21BleshSdkConfiguration")
 @interface BleshSdkConfiguration : NSObject
+- (nonnull instancetype)initWithTestMode:(BOOL)testMode adsEnabled:(BOOL)adsEnabled OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithTestMode:(BOOL)testMode adsEnabled:(BOOL)adsEnabled pushNotificationToken:(NSString * _Nonnull)pushNotificationToken OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -593,6 +595,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BleshSdk * _
 @property (nonatomic) BOOL adsEnabled;
 @property (nonatomic, readonly, copy) NSString * _Nonnull pushNotificationToken;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)start;
 - (void)startWithApplicationUser:(BleshSdkApplicationUser * _Nullable)applicationUser withConfiguration:(BleshSdkConfiguration * _Nullable)configuration completionHandler:(void (^ _Nullable)(enum BleshSdkStartState))completionHandler;
 - (void)startWithSecretKey:(NSString * _Nullable)secretKey withApplicationUser:(BleshSdkApplicationUser * _Nullable)applicationUser withConfiguration:(BleshSdkConfiguration * _Nullable)configuration completionHandler:(void (^ _Nullable)(enum BleshSdkStartState))completionHandler;
 - (void)stop;
@@ -624,6 +627,7 @@ typedef SWIFT_ENUM(NSInteger, BleshSdkApplicationUserGender, open) {
 
 SWIFT_CLASS("_TtC8BleshSDK21BleshSdkConfiguration")
 @interface BleshSdkConfiguration : NSObject
+- (nonnull instancetype)initWithTestMode:(BOOL)testMode adsEnabled:(BOOL)adsEnabled OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithTestMode:(BOOL)testMode adsEnabled:(BOOL)adsEnabled pushNotificationToken:(NSString * _Nonnull)pushNotificationToken OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -927,6 +931,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BleshSdk * _
 @property (nonatomic) BOOL adsEnabled;
 @property (nonatomic, readonly, copy) NSString * _Nonnull pushNotificationToken;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)start;
 - (void)startWithApplicationUser:(BleshSdkApplicationUser * _Nullable)applicationUser withConfiguration:(BleshSdkConfiguration * _Nullable)configuration completionHandler:(void (^ _Nullable)(enum BleshSdkStartState))completionHandler;
 - (void)startWithSecretKey:(NSString * _Nullable)secretKey withApplicationUser:(BleshSdkApplicationUser * _Nullable)applicationUser withConfiguration:(BleshSdkConfiguration * _Nullable)configuration completionHandler:(void (^ _Nullable)(enum BleshSdkStartState))completionHandler;
 - (void)stop;
@@ -958,6 +963,7 @@ typedef SWIFT_ENUM(NSInteger, BleshSdkApplicationUserGender, open) {
 
 SWIFT_CLASS("_TtC8BleshSDK21BleshSdkConfiguration")
 @interface BleshSdkConfiguration : NSObject
+- (nonnull instancetype)initWithTestMode:(BOOL)testMode adsEnabled:(BOOL)adsEnabled OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithTestMode:(BOOL)testMode adsEnabled:(BOOL)adsEnabled pushNotificationToken:(NSString * _Nonnull)pushNotificationToken OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
