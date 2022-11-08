@@ -268,6 +268,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BleshSdk * _
 - (void)didChangeLocationAuthorization:(CLAuthorizationStatus)status;
 - (void)didChangeNotificationAuthorization:(BOOL)granted;
 - (void)didReceiveDeviceToken:(NSData * _Nonnull)deviceToken;
+- (void)didReceiveRegistrationToken:(NSString * _Nullable)registrationToken;
 - (void)didReceiveUNNotificationResponse:(UNNotificationResponse * _Nonnull)response SWIFT_AVAILABILITY(ios,introduced=10);
 - (void)didReceiveLocalNotification:(UILocalNotification * _Nonnull)notification;
 - (void)didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo;
@@ -604,6 +605,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BleshSdk * _
 - (void)didChangeLocationAuthorization:(CLAuthorizationStatus)status;
 - (void)didChangeNotificationAuthorization:(BOOL)granted;
 - (void)didReceiveDeviceToken:(NSData * _Nonnull)deviceToken;
+- (void)didReceiveRegistrationToken:(NSString * _Nullable)registrationToken;
 - (void)didReceiveUNNotificationResponse:(UNNotificationResponse * _Nonnull)response SWIFT_AVAILABILITY(ios,introduced=10);
 - (void)didReceiveLocalNotification:(UILocalNotification * _Nonnull)notification;
 - (void)didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo;
@@ -940,6 +942,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BleshSdk * _
 - (void)didChangeLocationAuthorization:(CLAuthorizationStatus)status;
 - (void)didChangeNotificationAuthorization:(BOOL)granted;
 - (void)didReceiveDeviceToken:(NSData * _Nonnull)deviceToken;
+- (void)didReceiveRegistrationToken:(NSString * _Nullable)registrationToken;
 - (void)didReceiveUNNotificationResponse:(UNNotificationResponse * _Nonnull)response SWIFT_AVAILABILITY(ios,introduced=10);
 - (void)didReceiveLocalNotification:(UILocalNotification * _Nonnull)notification;
 - (void)didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo;

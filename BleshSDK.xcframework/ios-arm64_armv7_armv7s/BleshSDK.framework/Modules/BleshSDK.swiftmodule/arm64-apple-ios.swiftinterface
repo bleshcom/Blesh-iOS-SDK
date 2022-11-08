@@ -60,6 +60,7 @@ import _Concurrency
   @objc public func didChangeLocationAuthorization(_ status: CoreLocation.CLAuthorizationStatus)
   @objc public func didChangeNotificationAuthorization(_ granted: Swift.Bool)
   @objc public func didReceiveDeviceToken(_ deviceToken: Foundation.Data)
+  @objc public func didReceiveRegistrationToken(_ registrationToken: Swift.String?)
   @available(iOS 10, *)
   @objc public func didReceiveUNNotificationResponse(_ response: UserNotifications.UNNotificationResponse)
   @objc public func didReceiveLocalNotification(_ notification: UIKit.UILocalNotification)
