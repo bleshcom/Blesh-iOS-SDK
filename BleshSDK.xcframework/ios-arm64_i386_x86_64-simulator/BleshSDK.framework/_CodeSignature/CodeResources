@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YDvzl05kybg+RPC2yTxkaNyjmD0=
+		/zAgrcxYqnJ2H4NaZAVZrA0T2Nw=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YC5OCLwHK+uczqMMUvlt2F1EHwE=
+		4EwAkzopGE2AZka9TzClzLySaX8=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		NUV60xkV4W6Lnzu1vA3zJ7Winkw=
+		6bf/fiTUOmRY5EZK1AqGD29iNIk=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		MTFt8PP5SOgGERzs0Qtz+F111+U=
+		SlBGsiybbRQ5a/7B4BgRtcQFYQA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -140,11 +140,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YC5OCLwHK+uczqMMUvlt2F1EHwE=
+			4EwAkzopGE2AZka9TzClzLySaX8=
 			</data>
 			<key>hash2</key>
 			<data>
-			Na7JLpGFPGAOSoq/EAP1ywQg9fTbig8TPP2I1s6UpR4=
+			unLCBQp1fRYaLxWxLKwimPAq62M1tBsmFYfnW3Pu0O8=
 			</data>
 		</dict>
 		<key>Modules/BleshSDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -173,11 +173,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NUV60xkV4W6Lnzu1vA3zJ7Winkw=
+			6bf/fiTUOmRY5EZK1AqGD29iNIk=
 			</data>
 			<key>hash2</key>
 			<data>
-			BwNndrv+MCk/yIEhvNhNaTiXDE9nXZscpP6A8ljzSl4=
+			+EaKmPeZWaSeFLv7R8wSJ9ZGh6Tl3nyIB2SzaueU4c0=
 			</data>
 		</dict>
 		<key>Modules/BleshSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -206,11 +206,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MTFt8PP5SOgGERzs0Qtz+F111+U=
+			SlBGsiybbRQ5a/7B4BgRtcQFYQA=
 			</data>
 			<key>hash2</key>
 			<data>
-			I8JHwCn0kKBtHhStoxi7VbC1qx8cwFr4zc5may2tYS0=
+			wrznq1f80iYyUJExGL+6Oxtqpet/Akmebtbq2yQVX6M=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
