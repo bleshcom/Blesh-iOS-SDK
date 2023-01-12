@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		byfJaGJpXT6S3AVo0iyBm3Uwz1w=
+		TM591kVLLG89oLEALeW4E51F+DQ=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		4EwAkzopGE2AZka9TzClzLySaX8=
+		POgJWZwYuDgmcT0YTJFLNKUncr4=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6bf/fiTUOmRY5EZK1AqGD29iNIk=
+		gxO7tFgEhPMFtB5nz1FR2mW35co=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		SlBGsiybbRQ5a/7B4BgRtcQFYQA=
+		Wz5U/z2JEVNCkEA43jTOvMYx6eg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -140,11 +140,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4EwAkzopGE2AZka9TzClzLySaX8=
+			POgJWZwYuDgmcT0YTJFLNKUncr4=
 			</data>
 			<key>hash2</key>
 			<data>
-			unLCBQp1fRYaLxWxLKwimPAq62M1tBsmFYfnW3Pu0O8=
+			yoAUgi/7XXuVMFEIGPWnCgTFBUS2SuODDBgGEgX7SOU=
 			</data>
 		</dict>
 		<key>Modules/BleshSDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -173,11 +173,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6bf/fiTUOmRY5EZK1AqGD29iNIk=
+			gxO7tFgEhPMFtB5nz1FR2mW35co=
 			</data>
 			<key>hash2</key>
 			<data>
-			+EaKmPeZWaSeFLv7R8wSJ9ZGh6Tl3nyIB2SzaueU4c0=
+			7IU8v4i33MguklGVuNqYbUYm0/l3iVclwhrpcW3ffqw=
 			</data>
 		</dict>
 		<key>Modules/BleshSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -206,11 +206,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SlBGsiybbRQ5a/7B4BgRtcQFYQA=
+			Wz5U/z2JEVNCkEA43jTOvMYx6eg=
 			</data>
 			<key>hash2</key>
 			<data>
-			wrznq1f80iYyUJExGL+6Oxtqpet/Akmebtbq2yQVX6M=
+			3ToxICYGaFrRHJNaaNFnhypqHQQhi2+BrdPIz6Lt+Xc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

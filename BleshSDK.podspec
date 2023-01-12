@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name                = "BleshSDK"
-    s.version             = "5.4.6"
+    s.version             = "5.4.7"
     s.summary             = "Blesh iOS SDK"
     s.homepage            = "https://blesh.com"
     s.author              = { "Blesh Technology Team" => "technology@blesh.com" }
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
     s.license             = {
         :type => 'Copyright',
         :text => <<-LICENSE
-        Copyright 2013 - 2022 Blesh, Inc. All rights reserved.
+        Copyright 2013 - 2023 Blesh, Inc. All rights reserved.
         LICENSE
     }
 end
