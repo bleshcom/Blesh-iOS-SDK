@@ -120,9 +120,22 @@ In order to integrate the Blesh iOS SDK make sure you are:
 
 ### 1. Adding the Blesh iOS SDK
 
-The Blesh iOS SDK can be added either by using CocoaPods or manually.
+The Blesh iOS SDK can be added by using various dependency managers or manually.
 
-#### 1.1. Adding the Blesh iOS SDK with CocoaPods
+#### 1.1. Adding the Blesh iOS SDK with Swift Package Manager
+
+Newer Xcode versions support adding packages through the IDE interface. Blesh iOS SDK can be easily integrated by following steps below.
+
+**Steps to add:**
+
+1. Select "`Add Packages`" in the "`File`" menu.
+2. Enter the GitHub address [https://github.com/bleshcom/Blesh-iOS-SDK](https://github.com/bleshcom/Blesh-iOS-SDK) for the input labeled "`Search or Enter Package URL`".
+3. Xcode will automatically fetch package details. Select "`Up to Next Major Version`" for the "`Dependency Rule`" input. This will allow you to easily keep Blesh iOS SDK up-to-date.
+4. Select your application project for the "`Add to Project`" input.
+5. Click on the "`Add Package`" button and select your application project in the "`Add to Target`" column.
+6. Click on the "`Add Package`" button.
+
+#### 1.2. Adding the Blesh iOS SDK with CocoaPods
 
 Referencing the `BleshSDK` pod in the `Podfile` will be sufficient to add the Blesh iOS SDK to your project.
 
@@ -158,7 +171,7 @@ end
 pod install
 ```
 
-#### 1.2. Adding the Blesh iOS SDK Manually
+#### 1.3. Adding the Blesh iOS SDK Manually
 
 1. Download the SDK
 
