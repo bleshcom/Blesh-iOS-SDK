@@ -1,6 +1,6 @@
 # Blesh iOS SDK 5 Developer Guide
 
-**Version:** *5.4.7*
+**Version:** *5.4.8*
 
 This document describes integration of the Blesh iOS SDK with your iOS application.
 
@@ -9,6 +9,9 @@ This document describes integration of the Blesh iOS SDK with your iOS applicati
 Blesh iOS SDK collects location information from a device on which the iOS application is installed. Blesh Ads Platform uses this data for creating and enhancing audiences, serving targeted ads, and insights generation.
 
 ## Changelog
+
+  * **5.4.8** *(Released 2023-04-15)*
+    * Improved compatibility with Xcode 13+
 
   * **5.4.7** *(Released 2023-01-12)*
     * Added React Native compatibility for bundle versions

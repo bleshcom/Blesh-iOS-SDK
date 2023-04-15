@@ -15,3 +15,5 @@ FOUNDATION_EXPORT double BleshSDKVersionNumber;
 
 //! Project version string for BleshSDK.
 FOUNDATION_EXPORT const unsigned char BleshSDKVersionString[];
+
+extern const unsigned char * PBleshSDKVersionString;
