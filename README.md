@@ -8,6 +8,33 @@ This document describes integration of the Blesh iOS SDK with your iOS applicati
 
 Blesh iOS SDK collects location information from a device on which the iOS application is installed. Blesh Ads Platform uses this data for creating and enhancing audiences, serving targeted ads, and insights generation.
 
+## Table of Contents
+
+- [Blesh iOS SDK 5 Developer Guide](#blesh-ios-sdk-5-developer-guide)
+  - [Introduction](#introduction)
+  - [Table of Contents](#table-of-contents)
+  - [Changelog](#changelog)
+  - [Requirements](#requirements)
+  - [Integration](#integration)
+    - [1. Adding the Blesh iOS SDK](#1-adding-the-blesh-ios-sdk)
+      - [1.1. Adding the Blesh iOS SDK with Swift Package Manager](#11-adding-the-blesh-ios-sdk-with-swift-package-manager)
+      - [1.2. Adding the Blesh iOS SDK with CocoaPods](#12-adding-the-blesh-ios-sdk-with-cocoapods)
+      - [1.3. Adding the Blesh iOS SDK Manually](#13-adding-the-blesh-ios-sdk-manually)
+    - [2. Notifying the Blesh iOS SDK About Push Notifications](#2-notifying-the-blesh-ios-sdk-about-push-notifications)
+      - [2.1. Example](#21-example)
+    - [3. Adding Frameworks](#3-adding-frameworks)
+    - [4. Adding Supporting Files](#4-adding-supporting-files)
+    - [5. Reviewing Permissions](#5-reviewing-permissions)
+  - [Usage](#usage)
+    - [1. Entering the Blesh Ads Platform Access Key](#1-entering-the-blesh-ads-platform-access-key)
+    - [2. Starting the Blesh iOS SDK](#2-starting-the-blesh-ios-sdk)
+        - [Example: Simple Initialization (Singleton)](#example-simple-initialization-singleton)
+        - [Example: Simple Initialization](#example-simple-initialization)
+        - [Example: Complete Initialization](#example-complete-initialization)
+    - [3. Notifying the Blesh iOS SDK About Changes in Permissions](#3-notifying-the-blesh-ios-sdk-about-changes-in-permissions)
+    - [4. Implementing the Blesh iOS SDK Delegate](#4-implementing-the-blesh-ios-sdk-delegate)
+
+
 ## Changelog
 
   * **5.4.8** *(Released 2023-04-15)*
@@ -195,6 +222,13 @@ Blesh iOS SDK **must be** notified when a push notification is about to be displ
 - Display a notification when the application is in the foreground (iOS 10+)
 - Display an ad when the user taps a notification
 
+Blesh iOS SDK currently supports remote push notifications throught Firebase Cloud Messaging ([FCM](https://firebase.google.com/docs/cloud-messaging)).
+
+> **Note:** Firebase certificates need to be registered on the [Blesh Publisher Portal](https://publisher.blesh.com).
+
+Below examples assume that you have integrated Firebase Messaging with your application.
+Please refer to the [FCM iOS Documentation](https://firebase.google.com/docs/cloud-messaging/ios/client#fetching-the-current-registration-token) for more information.
+
 #### 2.1. Example
 
 **Swift:**
@@ -203,9 +237,10 @@ Blesh iOS SDK **must be** notified when a push notification is about to be displ
 import UIKit
 import UserNotifications
 import BleshSDK
+import FirebaseMessaging
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -219,21 +254,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             BleshSdk.sharedInstance.didReceiveLocalNotification(notification)
         }
 
+        // enable remote notifications
+        application.registerForRemoteNotifications()
+
         // ... rest of the method ...
 
         return true
     }
 
+    // support remote notifications
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        // notify FCM
+        Messaging.messaging().appDidReceiveMessage(userInfo)
+
+        // notify Blesh SDK
+        BleshSdk.sharedInstance.didReceiveRemoteNotification(userInfo) { UIBackgroundFetchResult in
+            completionHandler(.newData)
+        }
+
+        // ... rest of the method ...
+    }
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        // notify FCM
+        Messaging.messaging().apnsToken = deviceToken
+
+        // notify Blesh SDK
+        BleshSdk.sharedInstance.didReceiveDeviceToken(deviceToken)
+
+        // ... rest of the method ...
+    }
+
     // this method will be called when app received push notifications in foreground
     @available(iOS 10.0, *)
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
-    {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // deliver to FCM
+        Messaging.messaging().appDidReceiveMessage(notification.request.content.userInfo)
+
         completionHandler([.alert, .badge, .sound])
     }
 
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        // deliver to FCM
+        Messaging.messaging().appDidReceiveMessage(response.notification.request.content.userInfo)
+
+        // deliver to Blesh SDK
         BleshSdk.sharedInstance.didReceiveUNNotificationResponse(response)
+
         completionHandler()
     }
 
@@ -255,9 +323,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
 ```objective-c
 #import <UserNotifications/UserNotifications.h>
+#import <FirebaseMessaging/FirebaseMessaging.h>
+
 // ... rest of imports ...
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UNUserNotificationCenterDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UNUserNotificationCenterDelegate, FIRMessagingDelegate>
 
 // ... rest of the interface ...
 
@@ -278,9 +348,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
       [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
     }
 
+    // enable remote notifications
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+
     // ... rest of the method ...
 
     return YES;
+}
+
+// support remote notifications
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    // notify FCM
+    [[FIRMessaging messaging] appDidReceiveMessage:userInfo];
+
+    // notify Blesh SDK
+    [[BleshSdk sharedInstance] didReceiveRemoteNotification:userInfo completion:^(UIBackgroundFetchResult result) {
+        completionHandler(UIBackgroundFetchResultNewData);
+    }];
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // notify FCM
+    [[FIRMessaging messaging] setAPNSToken:deviceToken];
+
+    // notify Blesh SDK
+    [[BleshSdk sharedInstance] didReceiveDeviceToken:deviceToken];
 }
 
 // this method will be called when app received push notifications in foreground
@@ -288,11 +380,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
        willPresentNotification:(UNNotification *)notification
          withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
 {
+  // deliver to FCM
+  [[FIRMessaging messaging] appDidReceiveMessage:notification.request.content.userInfo];
+
   completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionSound | UNNotificationPresentationOptionBadge);
 }
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler
 {
+  // deliver to FCM
+  [[FIRMessaging messaging] appDidReceiveMessage:response.notification.request.content.userInfo];
+
+  // deliver to Blesh SDK
   [[BleshSdk sharedInstance] didReceiveUNNotificationResponse:response];
 
   completionHandler();
@@ -440,9 +539,12 @@ start(
 
 * `withConfiguration` parameter allows you to configure the behaviour of the Blesh iOS SDK. The `BleshSdkConfiguration` class contains the following:
 
-| Property   | Type | Description                                                                       | Example |
-|------------|------|-----------------------------------------------------------------------------------|---------|
-| testMode   | Bool | Use the SDK in the test mode (true) or use the SDK in the production mode (false) | false   |
+| Property              | Type   | Description                                                                       | Example                          |
+|-----------------------|--------|-----------------------------------------------------------------------------------|----------------------------------|
+| testMode              | Bool   | Use the SDK in the test mode (true) or use the SDK in the production mode (false) | false                            |
+| pushNotificationToken | String | Remote push notification token (device registration token)                        | `Messaging.messaging().fcmToken` |
+
+For valid values of `pushNotificationToken` please refer to the [FCM iOS Documentation](https://firebase.google.com/docs/cloud-messaging/ios/client#fetching-the-current-registration-token) for more information.
 
 > **Note:** `testMode` is off by default. You can enable this mode during your integration tests. Production environment will not be effected when this flag is set to `true`.
 
@@ -489,7 +591,8 @@ BleshSdk* bleshSdk = [[BleshSdk alloc] init];
 
 ```swift
 let bleshSdkConfiguration = BleshSdkConfiguration(
-	testMode: false
+	testMode: false,
+	pushNotificationToken: Messaging.messaging().fcmToken ?? BleshSdk.sharedInstance.pushNotificationToken
 )
 
 let bleshSdkApplicationUser = BleshSdkApplicationUser(
@@ -516,7 +619,7 @@ BleshSdk.sharedInstance.start(
 BleshSdkConfiguration *configuration = [[BleshSdkConfiguration alloc]
                                         initWithTestMode:false
                                         adsEnabled:true
-                                        pushNotificationToken:@""];
+                                        pushNotificationToken:[FIRMessaging messaging].FCMToken ?: [BleshSdk sharedInstance].pushNotificationToken];
 
 BleshSdkApplicationUser *user = [[BleshSdkApplicationUser alloc] initWithUserId:@"42"
                                       genderCode:0 // 0: female 1: male
