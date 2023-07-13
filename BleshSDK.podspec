@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name                = "BleshSDK"
-    s.version             = "5.4.8"
+    s.version             = "5.4.9"
     s.summary             = "Blesh iOS SDK"
     s.homepage            = "https://blesh.com"
     s.author              = { "Blesh Technology Team" => "technology@blesh.com" }
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
     s.source              = { :git => "https://github.com/bleshcom/Blesh-iOS-SDK.git", :tag => s.version.to_s }
     s.source_files        =  'BleshSDK.xcframework/**/BleshSDK.framework/Headers/*.h'
   
-    s.platform            = :ios, 9.0
+    s.platform            = :ios, 11.0
     s.requires_arc        = true
 
     s.vendored_frameworks = "BleshSDK.xcframework"

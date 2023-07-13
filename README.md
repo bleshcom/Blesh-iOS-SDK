@@ -1,6 +1,6 @@
 # Blesh iOS SDK 5 Developer Guide
 
-**Version:** *5.4.8*
+**Version:** *5.4.9*
 
 This document describes integration of the Blesh iOS SDK with your iOS application.
 
@@ -21,7 +21,10 @@ Blesh iOS SDK collects location information from a device on which the iOS appli
       - [1.2. Adding the Blesh iOS SDK with CocoaPods](#12-adding-the-blesh-ios-sdk-with-cocoapods)
       - [1.3. Adding the Blesh iOS SDK Manually](#13-adding-the-blesh-ios-sdk-manually)
     - [2. Notifying the Blesh iOS SDK About Push Notifications](#2-notifying-the-blesh-ios-sdk-about-push-notifications)
-      - [2.1. Example](#21-example)
+      - [2.1. APNs](#21-apns)
+        - [2.1.1. Example](#211-example)
+      - [2.2. FCM](#22-fcm)
+        - [2.2.1. Example](#221-example)
     - [3. Adding Frameworks](#3-adding-frameworks)
     - [4. Adding Supporting Files](#4-adding-supporting-files)
     - [5. Reviewing Permissions](#5-reviewing-permissions)
@@ -36,6 +39,10 @@ Blesh iOS SDK collects location information from a device on which the iOS appli
 
 
 ## Changelog
+
+  * **5.4.9** *(Released 2023-07-14)*
+    * Improved APNs support
+    * Set minimum iOS version to 11
 
   * **5.4.8** *(Released 2023-04-15)*
     * Improved compatibility with Xcode 13+
@@ -137,7 +144,7 @@ Blesh iOS SDK collects location information from a device on which the iOS appli
 
 In order to integrate the Blesh iOS SDK make sure you are:
 
-  * Targeting iOS version 9 or higher
+  * Targeting iOS version 11 or higher
   * Targeting the Swift 5 compiler
   * Enabling the "`Always Embed Swift Standard Libraries`" build option (or the "`Embedded Content Contains Swift Code`" build option for older versions of Xcode) if your application is developed using the Objective-C language
     * Swift Standard Libraries are required for iOS versions 12.1 or earlier. See [QA1881](https://developer.apple.com/library/archive/qa/qa1881/_index.html) for details
@@ -222,14 +229,151 @@ Blesh iOS SDK **must be** notified when a push notification is about to be displ
 - Display a notification when the application is in the foreground (iOS 10+)
 - Display an ad when the user taps a notification
 
-Blesh iOS SDK currently supports remote push notifications throught Firebase Cloud Messaging ([FCM](https://firebase.google.com/docs/cloud-messaging)).
+Blesh iOS SDK supports remote push notifications throught Apple Push Notification service ([APNs](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_token-based_connection_to_apns)) and Firebase Cloud Messaging ([FCM](https://firebase.google.com/docs/cloud-messaging)).
 
-> **Note:** Firebase certificates need to be registered on the [Blesh Publisher Portal](https://publisher.blesh.com).
+> **Note:** APNs & Firebase certificates need to be registered on the [Blesh Publisher Portal](https://publisher.blesh.com).
+
+#### 2.1. APNs
+
+Below examples assume that you have integrated Apple Push Notification service with your application.
+Please refer to the [APNs iOS Documentation](https://developer.apple.com/documentation/usernotifications/registering_your_app_with_apns) for more information.
+
+##### 2.1.1. Example
+
+**Swift:**
+
+```swift
+import UIKit
+import UserNotifications
+import BleshSDK
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+    var window: UIWindow?
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // mark this class as a UNUserNotificationCenterDelegate
+        UNUserNotificationCenter.current().delegate = self
+
+        // enable remote notifications
+        application.registerForRemoteNotifications()
+
+        // ... rest of the method ...
+
+        return true
+    }
+
+    // support remote notifications
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        // notify Blesh SDK
+        BleshSdk.sharedInstance.didReceiveRemoteNotification(userInfo) { UIBackgroundFetchResult in
+            completionHandler(.newData)
+        }
+
+        // ... rest of the method ...
+    }
+
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        NSLog("Failed to register for remote notifications: \(error)")
+    }
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        // notify Blesh SDK
+        BleshSdk.sharedInstance.didReceiveDeviceToken(deviceToken)
+
+        // ... rest of the method ...
+    }
+
+    // this method will be called when app received push notifications in foreground
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .badge, .sound])
+    }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        // deliver to Blesh SDK
+        BleshSdk.sharedInstance.didReceiveUNNotificationResponse(response)
+
+        completionHandler()
+    }
+
+    // ... rest of the class ...
+}
+```
+
+**Example:** Objective-C (AppDelegate.h)
+
+```objective-c
+#import <UserNotifications/UserNotifications.h>
+
+// ... rest of imports ...
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UNUserNotificationCenterDelegate>
+
+// ... rest of the interface ...
+
+@end
+```
+
+**Example:** Objective-C (AppDelegate.m)
+
+```objective-c
+#import <BleshSDK/BleshSDK.h>
+// ... rest of imports ...
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // mark this class as a UNUserNotificationCenterDelegate
+    [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
+
+    // enable remote notifications
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+
+    // ... rest of the method ...
+
+    return YES;
+}
+
+// support remote notifications
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    // notify Blesh SDK
+    [[BleshSdk sharedInstance] didReceiveRemoteNotification:userInfo completion:^(UIBackgroundFetchResult result) {
+        completionHandler(UIBackgroundFetchResultNewData);
+    }];
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // notify Blesh SDK
+    [[BleshSdk sharedInstance] didReceiveDeviceToken:deviceToken];
+}
+
+// this method will be called when app received push notifications in foreground
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+       willPresentNotification:(UNNotification *)notification
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
+{
+  completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionSound | UNNotificationPresentationOptionBadge);
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler
+{
+  // deliver to Blesh SDK
+  [[BleshSdk sharedInstance] didReceiveUNNotificationResponse:response];
+
+  completionHandler();
+}
+
+// ... rest of the class ...
+
+@end
+```
+
+#### 2.2. FCM
 
 Below examples assume that you have integrated Firebase Messaging with your application.
 Please refer to the [FCM iOS Documentation](https://firebase.google.com/docs/cloud-messaging/ios/client#fetching-the-current-registration-token) for more information.
 
-#### 2.1. Example
+##### 2.2.1. Example
 
 **Swift:**
 
@@ -245,14 +389,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // mark this class as a UNUserNotificationCenterDelegate
-        if #available(iOS 10, *) {
-            UNUserNotificationCenter.current().delegate = self
-        }
-
-        // handle any new not-processed notifications
-        if let notification = launchOptions?[UIApplication.LaunchOptionsKey.localNotification] as? UILocalNotification {
-            BleshSdk.sharedInstance.didReceiveLocalNotification(notification)
-        }
+        UNUserNotificationCenter.current().delegate = self
 
         // enable remote notifications
         application.registerForRemoteNotifications()
@@ -286,7 +423,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 
     // this method will be called when app received push notifications in foreground
-    @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         // deliver to FCM
         Messaging.messaging().appDidReceiveMessage(notification.request.content.userInfo)
@@ -294,7 +430,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         completionHandler([.alert, .badge, .sound])
     }
 
-    @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         // deliver to FCM
         Messaging.messaging().appDidReceiveMessage(response.notification.request.content.userInfo)
@@ -303,16 +438,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         BleshSdk.sharedInstance.didReceiveUNNotificationResponse(response)
 
         completionHandler()
-    }
-
-    // compatibility with iOS < 10
-    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
-        BleshSdk.sharedInstance.didReceiveLocalNotification(notification)
-    }
-
-    // compatibility with iOS < 10
-    func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, completionHandler: @escaping () -> Void) {
-        BleshSdk.sharedInstance.didReceiveLocalNotification(notification)
     }
 
     // ... rest of the class ...
@@ -344,9 +469,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // mark this class as a UNUserNotificationCenterDelegate
-    if (@available(iOS 10, *)) {
-      [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
-    }
+    [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
 
     // enable remote notifications
     [[UIApplication sharedApplication] registerForRemoteNotifications];
