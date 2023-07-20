@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BleshSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AdSupport
@@ -17,15 +17,15 @@ import _Concurrency
 import _StringProcessing
 @_hasMissingDesignatedInitializers @objc public class BleshRentalFinishedEvent : BleshSDK.BleshEvent {
   public init(userId: Swift.String, assetId: Swift.String)
-  override public func encode(to encoder: Swift.Encoder) throws
+  override public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 @objc public class BleshSdkApplicationUser : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(userId: Swift.String?, genderCode: Foundation.NSNumber?, yearOfBirth: Foundation.NSNumber?, email: Swift.String?, phoneNumber: Swift.String?, other: Swift.Dictionary<Swift.String, Swift.String>?)
   public init(userId: Swift.String?, gender: BleshSDK.BleshSdkApplicationUserGender?, yearOfBirth: Swift.Int?, email: Swift.String?, phoneNumber: Swift.String?, other: Swift.Dictionary<Swift.String, Swift.String>?)
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc public enum BleshSdkStartState : Swift.Int, Swift.CustomStringConvertible {
   case failure = 0
@@ -42,7 +42,7 @@ import _StringProcessing
 }
 @_inheritsConvenienceInitializers @objc public class BleshSdk : ObjectiveC.NSObject {
   @objc public static let sharedInstance: BleshSDK.BleshSdk
-  @objc weak open var delegate: BleshSDK.BleshSdkDelegate?
+  @objc weak open var delegate: (any BleshSDK.BleshSdkDelegate)?
   @objc public var isStarted: Swift.Bool {
     @objc get
   }
@@ -64,24 +64,26 @@ import _StringProcessing
   @objc public func didChangeNotificationAuthorization(_ granted: Swift.Bool)
   @objc public func didReceiveDeviceToken(_ deviceToken: Foundation.Data)
   @objc public func didReceiveRegistrationToken(_ registrationToken: Swift.String?)
+  @objc public func isSupportedNotification(withResponse response: UserNotifications.UNNotificationResponse) -> Swift.Bool
   @objc public func didReceiveUNNotificationResponse(_ response: UserNotifications.UNNotificationResponse)
+  @objc public func isSupportedNotification(withUserInfo userInfo: [Swift.AnyHashable : Any]) -> Swift.Bool
   @objc public func didReceiveRemoteNotification(_ userInfo: [Swift.AnyHashable : Any])
   @objc public func didReceiveRemoteNotification(_ userInfo: [Swift.AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class BleshSdkEventTrackingError : ObjectiveC.NSObject, Swift.Codable {
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers @objc public class BleshUserLoggedOutEvent : BleshSDK.BleshEvent {
   public init(userId: Swift.String)
-  override public func encode(to encoder: Swift.Encoder) throws
+  override public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class BleshEvent : ObjectiveC.NSObject, Swift.Encodable {
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 @objc public enum BleshSdkApplicationUserGender : Swift.Int {
   case female = 0
@@ -94,7 +96,7 @@ import _StringProcessing
 }
 @_hasMissingDesignatedInitializers @objc public class BleshRentalCreatedEvent : BleshSDK.BleshEvent {
   public init(userId: Swift.String, assetId: Swift.String)
-  override public func encode(to encoder: Swift.Encoder) throws
+  override public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 public enum ReachabilityError : Swift.Error {
@@ -181,19 +183,19 @@ extension BleshSDK.Reachability {
 }
 @_hasMissingDesignatedInitializers @objc public class BleshUserLoggedInEvent : BleshSDK.BleshEvent {
   public init(userId: Swift.String)
-  override public func encode(to encoder: Swift.Encoder) throws
+  override public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 @objc public class BleshSdkConfiguration : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(testMode: Swift.Bool = false, adsEnabled: Swift.Bool = true)
   @objc public init(testMode: Swift.Bool = false, adsEnabled: Swift.Bool = true, pushNotificationToken: Swift.String = "")
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers @objc public class BleshRentalStartedEvent : BleshSDK.BleshEvent {
   public init(userId: Swift.String, assetId: Swift.String)
-  override public func encode(to encoder: Swift.Encoder) throws
+  override public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 extension BleshSDK.BleshSdkStartState : Swift.Equatable {}

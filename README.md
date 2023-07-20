@@ -1,6 +1,6 @@
 # Blesh iOS SDK 5 Developer Guide
 
-**Version:** *5.4.9*
+**Version:** *5.4.10*
 
 This document describes integration of the Blesh iOS SDK with your iOS application.
 
@@ -39,6 +39,9 @@ Blesh iOS SDK collects location information from a device on which the iOS appli
 
 
 ## Changelog
+
+  * **5.4.10** *(Released 2023-07-20)*
+    * Added helper methods to identify Blesh notifications
 
   * **5.4.9** *(Released 2023-07-14)*
     * Improved APNs support
