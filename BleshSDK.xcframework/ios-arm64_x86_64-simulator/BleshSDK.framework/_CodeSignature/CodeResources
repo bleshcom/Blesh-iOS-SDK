@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BleshSDK-Swift.h</key>
 		<data>
-		fhW0FU4YT0mMSUNjKacHvn3PY48=
+		R9NgaooLwyMaKbZ34w2g/lfSwX4=
 		</data>
 		<key>Headers/BleshSDK.h</key>
 		<data>
@@ -18,15 +18,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		dUOmoNpYZrSgaElFODzXgMFeEqI=
+		+OBRo3DEnOR9BeNrn+o8i9xlNg4=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		wzJOz5SsBP8TpiiC8v1h7rUQtsg=
+		6DNnY1GftKwi33E2+CiR5f/GExg=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		TuLVzRfjSHzNAswVvuVkaQQQLOc=
+		fxHiIMEJsrxpEL67zp3T4PDOWuk=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,19 +34,19 @@
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		TuLVzRfjSHzNAswVvuVkaQQQLOc=
+		fxHiIMEJsrxpEL67zp3T4PDOWuk=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		BXc/9UuUMx1HdO5AQLwnETrfATg=
+		LLG0rAPXVIzWG1LBDKS0Yz7h2dQ=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		wzJOz5SsBP8TpiiC8v1h7rUQtsg=
+		6DNnY1GftKwi33E2+CiR5f/GExg=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		b6UnfW2+UQRo6Tn7LHkmlDzRGYM=
+		cvCUdiXQ5oxPHfSv2uzwYYRQ0JM=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		b6UnfW2+UQRo6Tn7LHkmlDzRGYM=
+		cvCUdiXQ5oxPHfSv2uzwYYRQ0JM=
 		</data>
 		<key>Modules/BleshSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		5mvhzud6oDthqECmcz1WNjDB13c=
+		lSfjByaypjEY6kfiJYGmVPp5RmI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -68,7 +68,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			s5441kJtyPmIbhdKK8Ta3CGCtT4=
+			JctolD9ZksDUvorCWbQeXl1v0HM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -77,7 +77,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4QwcrhyNlzxGf5e3KLCofrFsByk=
+			8Nz4TjGlKJITVYHAqFxXeBu4rxc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bIZcvazbBUPE2UcxfespiPIaAuLklFnIlQ9YARYEMdI=
+			97vnw5ogyGzLQSZ5PxJK7apToICW15kI+yrVBVL5ptc=
 			</data>
 		</dict>
 		<key>Headers/BleshSDK.h</key>
@@ -110,14 +110,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2bwigAX3lf0N2D8Wj0MKJLGwHszJOZEy5lsOnBPfR6k=
+			W++6LovzRJHgN5CA/TUwixkoimmrwrvqvhgECAo+hhU=
 			</data>
 		</dict>
 		<key>Modules/BleshSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Obbo+F+0Ynb4cuieMNURB6g3tBdQdxzc+QfFv868TWk=
+			/B+HcFcrSsdmA51DlTXK1Hvo/Bq7L6iDjpN95AfrxQU=
 			</data>
 		</dict>
 		<key>Modules/BleshSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -131,28 +131,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Obbo+F+0Ynb4cuieMNURB6g3tBdQdxzc+QfFv868TWk=
+			/B+HcFcrSsdmA51DlTXK1Hvo/Bq7L6iDjpN95AfrxQU=
 			</data>
 		</dict>
 		<key>Modules/BleshSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			H3FAyJkxWqJ0aRze6ZBBeOi7crG9tnYbRqp6l6BmBRM=
+			ZdEEY0uG/VeWJV/5QClDmG+hVZRpeEUTuwY3QbVMmFU=
 			</data>
 		</dict>
 		<key>Modules/BleshSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2bwigAX3lf0N2D8Wj0MKJLGwHszJOZEy5lsOnBPfR6k=
+			W++6LovzRJHgN5CA/TUwixkoimmrwrvqvhgECAo+hhU=
 			</data>
 		</dict>
 		<key>Modules/BleshSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lLyouo6bDdiPsljg4I76ATTDTI2crL4Z+Ts8J0f3xqA=
+			GFWuYQn1Am199vfpD4qxRi7CIRJLxTpgypw1lpmiPj4=
 			</data>
 		</dict>
 		<key>Modules/BleshSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -166,14 +166,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lLyouo6bDdiPsljg4I76ATTDTI2crL4Z+Ts8J0f3xqA=
+			GFWuYQn1Am199vfpD4qxRi7CIRJLxTpgypw1lpmiPj4=
 			</data>
 		</dict>
 		<key>Modules/BleshSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			l7LEl/Twh8ycDO1BbocxamJMYb1HQfv20FMMNFc2vVA=
+			2YsbIw2osi/bj6Vp/JeRaar0UUd7aJsN0KbfRwtQru0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -187,7 +187,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gEBlE54rp7Alp+bCZDIe70+k6MES79XltvE9qxS4BtM=
+			Qvz+FcVPgjk0vs69myC3rL7jT5wFHR+Lvvuso+lCk6A=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -196,7 +196,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			z9P9mBqdtGhwes9KD9ZPUBfCMi69Ghdj1CC64BPuI24=
+			yzIN0DBYGCMNe0znJNgzdVEL2WOEZYYiaj2z6rEkeJU=
 			</data>
 			<key>optional</key>
 			<true/>

@@ -314,6 +314,8 @@ enum BleshSdkStartState : NSInteger;
 @class BleshSdkEventTrackingError;
 @class NSData;
 @class UNNotificationResponse;
+@class UNNotificationRequest;
+@class UNMutableNotificationContent;
 
 SWIFT_CLASS("_TtC8BleshSDK8BleshSdk")
 @interface BleshSdk : NSObject
@@ -335,10 +337,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BleshSdk * _
 - (void)didReceiveDeviceToken:(NSData * _Nonnull)deviceToken;
 - (void)didReceiveRegistrationToken:(NSString * _Nullable)registrationToken;
 - (BOOL)isSupportedNotificationWithResponse:(UNNotificationResponse * _Nonnull)response SWIFT_WARN_UNUSED_RESULT;
-- (void)didReceiveUNNotificationResponse:(UNNotificationResponse * _Nonnull)response;
 - (BOOL)isSupportedNotificationWithUserInfo:(NSDictionary * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
+- (void)didReceiveUNNotificationResponse:(UNNotificationResponse * _Nonnull)response;
 - (void)didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo;
 - (void)didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo fetchCompletionHandler:(void (^ _Nonnull)(UIBackgroundFetchResult))completionHandler;
+- (void)decorateRemoteNotification:(UNNotificationRequest * _Nonnull)request bestAttemptContent:(UNMutableNotificationContent * _Nonnull)bestAttemptContent;
 @end
 
 @class NSNumber;

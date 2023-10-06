@@ -65,10 +65,11 @@ import _StringProcessing
   @objc public func didReceiveDeviceToken(_ deviceToken: Foundation.Data)
   @objc public func didReceiveRegistrationToken(_ registrationToken: Swift.String?)
   @objc public func isSupportedNotification(withResponse response: UserNotifications.UNNotificationResponse) -> Swift.Bool
-  @objc public func didReceiveUNNotificationResponse(_ response: UserNotifications.UNNotificationResponse)
   @objc public func isSupportedNotification(withUserInfo userInfo: [Swift.AnyHashable : Any]) -> Swift.Bool
+  @objc public func didReceiveUNNotificationResponse(_ response: UserNotifications.UNNotificationResponse)
   @objc public func didReceiveRemoteNotification(_ userInfo: [Swift.AnyHashable : Any])
   @objc public func didReceiveRemoteNotification(_ userInfo: [Swift.AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
+  @objc public func decorateRemoteNotification(_ request: UserNotifications.UNNotificationRequest, bestAttemptContent: UserNotifications.UNMutableNotificationContent)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class BleshSdkEventTrackingError : ObjectiveC.NSObject, Swift.Codable {

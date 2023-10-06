@@ -36,6 +36,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BleshSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -1882,34 +1892,6 @@
             "objc_name": "isSupportedNotificationWithResponse:",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "didReceiveUNNotificationResponse",
-            "printedName": "didReceiveUNNotificationResponse(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UNNotificationResponse",
-                "printedName": "UserNotifications.UNNotificationResponse",
-                "usr": "c:objc(cs)UNNotificationResponse"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BleshSDK@objc(cs)BleshSdk(im)didReceiveUNNotificationResponse:",
-            "mangledName": "$s8BleshSDK0A3SdkC32didReceiveUNNotificationResponseyySo0fG0CF",
-            "moduleName": "BleshSDK",
-            "declAttributes": [
-              "AccessControl",
               "ObjC"
             ],
             "funcSelfKind": "NonMutating"
@@ -1952,8 +1934,34 @@
             "objc_name": "isSupportedNotificationWithUserInfo:",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didReceiveUNNotificationResponse",
+            "printedName": "didReceiveUNNotificationResponse(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNNotificationResponse",
+                "printedName": "UserNotifications.UNNotificationResponse",
+                "usr": "c:objc(cs)UNNotificationResponse"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BleshSDK@objc(cs)BleshSdk(im)didReceiveUNNotificationResponse:",
+            "mangledName": "$s8BleshSDK0A3SdkC32didReceiveUNNotificationResponseyySo0fG0CF",
+            "moduleName": "BleshSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -2048,6 +2056,39 @@
             "declKind": "Func",
             "usr": "c:@M@BleshSDK@objc(cs)BleshSdk(im)didReceiveRemoteNotification:fetchCompletionHandler:",
             "mangledName": "$s8BleshSDK0A3SdkC28didReceiveRemoteNotification_22fetchCompletionHandlerySDys11AnyHashableVypG_ySo23UIBackgroundFetchResultVctF",
+            "moduleName": "BleshSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "decorateRemoteNotification",
+            "printedName": "decorateRemoteNotification(_:bestAttemptContent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNNotificationRequest",
+                "printedName": "UserNotifications.UNNotificationRequest",
+                "usr": "c:objc(cs)UNNotificationRequest"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNMutableNotificationContent",
+                "printedName": "UserNotifications.UNMutableNotificationContent",
+                "usr": "c:objc(cs)UNMutableNotificationContent"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BleshSDK@objc(cs)BleshSdk(im)decorateRemoteNotification:bestAttemptContent:",
+            "mangledName": "$s8BleshSDK0A3SdkC26decorateRemoteNotification_18bestAttemptContentySo21UNNotificationRequestC_So09UNMutablefI0CtF",
             "moduleName": "BleshSDK",
             "declAttributes": [
               "AccessControl",
@@ -3017,6 +3058,16 @@
             "usr": "s:SY",
             "mangledName": "$sSY"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BleshSDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -4993,6 +5044,26 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BleshSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BleshSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -5034,6 +5105,26 @@
         "printedName": "CoreLocation",
         "declKind": "Import",
         "moduleName": "BleshSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BleshSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BleshSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -5695,156 +5786,219 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontStyleResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 289,
+      "length": 6,
+      "value": "\"bold\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontStyleResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 314,
+      "length": 8,
+      "value": "\"italic\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontStyleResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 344,
+      "length": 11,
+      "value": "\"underline\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontStyleResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 381,
+      "length": 15,
+      "value": "\"strikethrough\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontStyleResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 289,
+      "length": 6,
+      "value": "\"bold\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontStyleResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 314,
+      "length": 8,
+      "value": "\"italic\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontStyleResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 344,
+      "length": 11,
+      "value": "\"underline\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontStyleResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 381,
+      "length": 15,
+      "value": "\"strikethrough\""
+    },
+    {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1324,
+      "offset": 1168,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1364,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "StringLiteral",
-      "offset": 1374,
+      "offset": 1414,
       "length": 55,
       "value": "\"BleshSDK: Skipped rendering the campaign notification\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "BooleanLiteral",
-      "offset": 2231,
+      "offset": 2301,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "StringLiteral",
-      "offset": 2269,
+      "offset": 2339,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "BooleanLiteral",
-      "offset": 2357,
+      "offset": 2427,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "StringLiteral",
-      "offset": 2684,
+      "offset": 2754,
       "length": 18,
       "value": "\"Blesh:CampaignId\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "StringLiteral",
-      "offset": 2746,
+      "offset": 2816,
       "length": 22,
       "value": "\"Blesh:NotificationId\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "StringLiteral",
-      "offset": 2812,
+      "offset": 2882,
       "length": 27,
       "value": "\"Blesh:NotificationContent\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "StringLiteral",
-      "offset": 3014,
+      "offset": 3084,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "IntegerLiteral",
-      "offset": 4579,
+      "offset": 4649,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "BooleanLiteral",
-      "offset": 4707,
+      "offset": 4777,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6141,
+      "offset": 6211,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "BooleanLiteral",
-      "offset": 6336,
+      "offset": 6406,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "BooleanLiteral",
-      "offset": 6656,
+      "offset": 6726,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "StringLiteral",
-      "offset": 7559,
+      "offset": 7629,
       "length": 40,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "StringLiteral",
-      "offset": 7573,
+      "offset": 7643,
       "length": 1,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "StringLiteral",
-      "offset": 7598,
+      "offset": 7668,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "StringLiteral",
-      "offset": 8588,
+      "offset": 8658,
       "length": 22,
       "value": "\"Blesh:NotificationId\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "BooleanLiteral",
-      "offset": 8704,
+      "offset": 8774,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "BooleanLiteral",
-      "offset": 8736,
+      "offset": 8806,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "StringLiteral",
-      "offset": 9162,
+      "offset": 9232,
       "length": 18,
       "value": "\"Blesh:CampaignId\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/NotificationContentService.swift",
       "kind": "StringLiteral",
-      "offset": 9243,
+      "offset": 9313,
       "length": 27,
       "value": "\"Blesh:NotificationContent\""
     },
@@ -6460,119 +6614,301 @@
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
       "kind": "StringLiteral",
-      "offset": 8714,
+      "offset": 8739,
       "length": 15,
       "value": "\"Unknown error\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
       "kind": "StringLiteral",
-      "offset": 8826,
+      "offset": 8943,
       "length": 5,
       "value": "\"get\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "StringLiteral",
+      "offset": 8985,
+      "length": 33,
+      "value": "\"application\/json; charset=UTF-8\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "StringLiteral",
+      "offset": 9040,
+      "length": 14,
+      "value": "\"Content-Type\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "StringLiteral",
+      "offset": 9092,
+      "length": 6,
+      "value": "\"gzip\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "StringLiteral",
+      "offset": 9120,
+      "length": 17,
+      "value": "\"Accept-Encoding\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "StringLiteral",
+      "offset": 9175,
+      "length": 5,
+      "value": "\"5.0\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "StringLiteral",
+      "offset": 9202,
+      "length": 22,
+      "value": "\"Blesh-Schema-Version\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "StringLiteral",
+      "offset": 9518,
+      "length": 9,
+      "value": "\"Bearer \""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "StringLiteral",
+      "offset": 9557,
+      "length": 15,
+      "value": "\"Authorization\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
       "kind": "BooleanLiteral",
-      "offset": 9028,
+      "offset": 9626,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
       "kind": "IntegerLiteral",
-      "offset": 9087,
+      "offset": 9689,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
       "kind": "IntegerLiteral",
-      "offset": 9121,
+      "offset": 9727,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
       "kind": "BooleanLiteral",
-      "offset": 9273,
+      "offset": 9895,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
       "kind": "StringLiteral",
-      "offset": 9786,
+      "offset": 10419,
       "length": 15,
       "value": "\"Unknown error\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
       "kind": "IntegerLiteral",
-      "offset": 9940,
+      "offset": 10677,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
       "kind": "IntegerLiteral",
-      "offset": 9948,
+      "offset": 10685,
       "length": 3,
       "value": "299"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
       "kind": "IntegerLiteral",
-      "offset": 10016,
+      "offset": 10757,
       "length": 3,
       "value": "400"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
       "kind": "IntegerLiteral",
-      "offset": 10024,
+      "offset": 10765,
       "length": 3,
       "value": "499"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
       "kind": "BooleanLiteral",
-      "offset": 10160,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
-      "kind": "BooleanLiteral",
-      "offset": 10644,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
-      "kind": "BooleanLiteral",
-      "offset": 11043,
+      "offset": 10909,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
       "kind": "StringLiteral",
-      "offset": 11252,
-      "length": 31,
-      "value": "\"Unable to save the response: \""
+      "offset": 11698,
+      "length": 15,
+      "value": "\"Unknown error\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "StringLiteral",
+      "offset": 12058,
+      "length": 12,
+      "value": "\"No content\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12376,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "StringLiteral",
+      "offset": 12589,
+      "length": 32,
+      "value": "\"Unable to parse the response: \""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
       "kind": "FloatLiteral",
-      "offset": 11462,
+      "offset": 12816,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
       "kind": "IntegerLiteral",
-      "offset": 11753,
+      "offset": 13123,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "StringLiteral",
+      "offset": 14129,
+      "length": 15,
+      "value": "\"Unknown error\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "StringLiteral",
+      "offset": 14241,
+      "length": 5,
+      "value": "\"get\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 14443,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14502,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14536,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 14688,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "StringLiteral",
+      "offset": 15201,
+      "length": 15,
+      "value": "\"Unknown error\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15355,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15363,
+      "length": 3,
+      "value": "299"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15431,
+      "length": 3,
+      "value": "400"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15439,
+      "length": 3,
+      "value": "499"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 15575,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 16059,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 16458,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "StringLiteral",
+      "offset": 16667,
+      "length": 31,
+      "value": "\"Unable to save the response: \""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "FloatLiteral",
+      "offset": 16877,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/HttpService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 17168,
       "length": 2,
       "value": "10"
     },
@@ -6726,7 +7062,21 @@
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/BleshApi.swift",
       "kind": "StringLiteral",
-      "offset": 4033,
+      "offset": 4043,
+      "length": 26,
+      "value": "\"\/campaigns\/\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/BleshApi.swift",
+      "kind": "StringLiteral",
+      "offset": 4068,
+      "length": 71,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/BleshApi.swift",
+      "kind": "StringLiteral",
+      "offset": 4330,
       "length": 9,
       "value": "\"\/events\""
     },
@@ -6754,170 +7104,233 @@
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "StringLiteral",
-      "offset": 6396,
+      "offset": 6456,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "StringLiteral",
-      "offset": 6528,
+      "offset": 6588,
       "length": 8,
       "value": "\"Manual\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 6747,
+      "offset": 6807,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 7203,
+      "offset": 7263,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "StringLiteral",
-      "offset": 7348,
+      "offset": 7408,
       "length": 15,
       "value": "\"ManualRestart\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 7571,
+      "offset": 7631,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "StringLiteral",
-      "offset": 8416,
+      "offset": 8476,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "StringLiteral",
-      "offset": 8514,
+      "offset": 8574,
       "length": 204,
       "value": "\"BleshSDK: Access key is missing. Please provide the access key via withSecretKey or ensure your Blesh Ads Platform access key is defined in the Info.plist file with the key \"Blesh Platform Access Key\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "StringLiteral",
-      "offset": 10805,
+      "offset": 10865,
       "length": 29,
       "value": "\"LocationAuthorizationChange\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "StringLiteral",
-      "offset": 10952,
+      "offset": 11012,
       "length": 33,
       "value": "\"NotificationAuthorizationChange\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "StringLiteral",
-      "offset": 11145,
+      "offset": 11205,
       "length": 6,
       "value": "\"%02x\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "StringLiteral",
-      "offset": 11359,
+      "offset": 11419,
       "length": 29,
       "value": "\"PushNotificationTokenChange\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "StringLiteral",
-      "offset": 11804,
+      "offset": 11864,
       "length": 29,
       "value": "\"PushNotificationTokenChange\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "StringLiteral",
-      "offset": 12197,
+      "offset": 12109,
       "length": 18,
       "value": "\"Blesh:CampaignId\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "StringLiteral",
-      "offset": 12259,
+      "offset": 12151,
       "length": 27,
       "value": "\"Blesh:NotificationContent\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 12321,
+      "offset": 12482,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 12370,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12815,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
-      "kind": "StringLiteral",
-      "offset": 12974,
-      "length": 10,
-      "value": "\"BleshRSR\""
-    },
-    {
-      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
-      "kind": "BooleanLiteral",
-      "offset": 13018,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
-      "kind": "BooleanLiteral",
-      "offset": 13059,
+      "offset": 12531,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "StringLiteral",
-      "offset": 13452,
+      "offset": 12670,
+      "length": 10,
+      "value": "\"BleshRSR\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12988,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 13037,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 13732,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 14107,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 14674,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 14979,
       "length": 10,
       "value": "\"BleshRSR\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "StringLiteral",
-      "offset": 14145,
+      "offset": 15724,
       "length": 57,
       "value": "\"BleshSDK: Error handling remote notification: \""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
       "kind": "StringLiteral",
-      "offset": 14200,
+      "offset": 15779,
       "length": 1,
       "value": "\".\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 16145,
+      "length": 14,
+      "value": "\"BleshPNImage\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 16410,
+      "length": 11,
+      "value": "\"image.jpg\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 16694,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 16860,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
+      "kind": "Array",
+      "offset": 17031,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 17286,
+      "length": 35,
+      "value": "\"error downloading image: \""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 17320,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/BeaconInteractionResponse.swift",
@@ -6936,70 +7349,77 @@
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ContentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 742,
+      "offset": 784,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ContentView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 783,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ContentView.swift",
       "kind": "Array",
-      "offset": 900,
+      "offset": 901,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1773,
+      "offset": 1510,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ContentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1785,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ContentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1927,
+      "offset": 1939,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ContentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2004,
+      "offset": 2016,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ContentView.swift",
-      "kind": "FloatLiteral",
-      "offset": 2580,
-      "length": 3,
-      "value": "1.0"
+      "kind": "BooleanLiteral",
+      "offset": 2911,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ContentView.swift",
-      "kind": "FloatLiteral",
-      "offset": 2612,
-      "length": 3,
-      "value": "1.0"
+      "kind": "BooleanLiteral",
+      "offset": 3085,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ContentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3623,
+      "offset": 3733,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ContentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4009,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ContentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3991,
+      "offset": 4083,
       "length": 1,
       "value": "0"
     },
@@ -7124,288 +7544,295 @@
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 1246,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 1521,
+      "offset": 1645,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 1782,
+      "offset": 1970,
+      "length": 13,
+      "value": "\"Kopyalandı\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 2099,
       "length": 12,
       "value": "\"telprompt:\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 2413,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
-      "kind": "StringLiteral",
-      "offset": 2464,
+      "offset": 2665,
       "length": 16,
       "value": "\"Teşekkürler!\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 2538,
+      "offset": 2739,
       "length": 32,
       "value": "\"Bu reklamı neden görüyorum?\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 2629,
+      "offset": 2830,
       "length": 141,
       "value": "\"Gördüğünüz reklam sizinle lokasyon bazlı fırsatlar ve bilgilendirmeler paylaşılması için uygulama tarafından gönderilmektedir.\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 2992,
+      "offset": 3193,
       "length": 29,
       "value": "\"Bu reklamı faydalı buldum\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 3230,
+      "offset": 3431,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 3337,
+      "offset": 3538,
       "length": 7,
       "value": "\"Kapat\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 3552,
+      "offset": 3753,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 3658,
+      "offset": 3859,
       "length": 36,
       "value": "\"Bu reklamları görmek istemiyorum\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 3926,
+      "offset": 4127,
       "length": 22,
       "value": "\"Sürekli görüyorum\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 4165,
+      "offset": 4366,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4177,
+      "offset": 4378,
       "length": 13,
       "value": "\"TooFrequent\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4296,
+      "offset": 4497,
       "length": 22,
       "value": "\"Beni ilgilendirmiyor\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 4535,
+      "offset": 4736,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4547,
+      "offset": 4748,
       "length": 12,
       "value": "\"Irrelevant\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4665,
+      "offset": 4866,
       "length": 43,
       "value": "\"Rahatsız edici olduğunu düşünüyorum\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 4925,
+      "offset": 5126,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4937,
+      "offset": 5138,
       "length": 12,
       "value": "\"Disturbing\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5051,
+      "offset": 5252,
       "length": 9,
       "value": "\"Vazgeç\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5861,
+      "offset": 6062,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5897,
+      "offset": 6098,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5932,
+      "offset": 6133,
       "length": 19,
       "value": "\"BleshNotification\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 6032,
+      "offset": 6233,
       "length": 5,
       "value": "\"caf\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 6124,
+      "offset": 6325,
       "length": 3,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 6140,
+      "offset": 6341,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 6170,
+      "offset": 6371,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 6224,
+      "offset": 6425,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 6273,
+      "offset": 6474,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 6338,
+      "offset": 6539,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 6545,
+      "offset": 6746,
       "length": 40,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 6562,
+      "offset": 6763,
       "length": 1,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 6584,
+      "offset": 6785,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "Dictionary",
-      "offset": 7421,
+      "offset": 7622,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 7755,
+      "offset": 7956,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 7891,
+      "offset": 8092,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 8039,
+      "offset": 8240,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 8335,
+      "offset": 8536,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 8390,
+      "offset": 8591,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/ContentInteractionHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 8615,
+      "offset": 8816,
       "length": 4,
       "value": "true"
     },
@@ -7419,399 +7846,413 @@
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 692,
+      "offset": 802,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1532,
+      "offset": 1812,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1885,
+      "offset": 2165,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2012,
+      "offset": 2292,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2018,
+      "offset": 2298,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2101,
+      "offset": 2381,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2158,
+      "offset": 2438,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2213,
+      "offset": 2493,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2402,
+      "offset": 2682,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2459,
+      "offset": 2739,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2545,
+      "offset": 2825,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2782,
+      "offset": 3062,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2818,
+      "offset": 3098,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2996,
+      "offset": 3276,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3509,
+      "offset": 3789,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3706,
+      "offset": 4180,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3712,
+      "offset": 4186,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3726,
+      "offset": 4200,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
+      "kind": "StringLiteral",
+      "offset": 4659,
+      "length": 38,
+      "value": "\"00000000-0000-0000-0000-000000000000\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
+      "kind": "StringLiteral",
+      "offset": 4712,
+      "length": 38,
+      "value": "\"00000000-0000-0000-0000-000000000000\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4075,
+      "offset": 5155,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4240,
+      "offset": 5320,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4604,
+      "offset": 5684,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4627,
+      "offset": 5707,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "FloatLiteral",
-      "offset": 4654,
+      "offset": 5734,
       "length": 3,
       "value": "2.0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4660,
+      "offset": 5740,
       "length": 2,
       "value": "45"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4671,
+      "offset": 5751,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4683,
+      "offset": 5763,
       "length": 2,
       "value": "90"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "FloatLiteral",
-      "offset": 4732,
+      "offset": 5812,
       "length": 4,
       "value": "-1.0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "FloatLiteral",
-      "offset": 4740,
+      "offset": 5820,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "FloatLiteral",
-      "offset": 4814,
+      "offset": 5894,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4845,
+      "offset": 5925,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4876,
+      "offset": 5956,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4936,
+      "offset": 6016,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4942,
+      "offset": 6022,
       "length": 2,
       "value": "35"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4953,
+      "offset": 6033,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4965,
+      "offset": 6045,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "FloatLiteral",
-      "offset": 5106,
+      "offset": 6186,
       "length": 4,
       "value": "45.0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "FloatLiteral",
-      "offset": 5137,
+      "offset": 6217,
       "length": 5,
       "value": "180.0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5199,
+      "offset": 6279,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5240,
+      "offset": 6320,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5251,
+      "offset": 6331,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5263,
+      "offset": 6343,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "FloatLiteral",
-      "offset": 5403,
+      "offset": 6483,
       "length": 5,
       "value": "-45.0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "FloatLiteral",
-      "offset": 5435,
+      "offset": 6515,
       "length": 5,
       "value": "180.0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "StringLiteral",
-      "offset": 5784,
+      "offset": 6864,
       "length": 9,
       "value": "\"opacity\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "FloatLiteral",
-      "offset": 5832,
+      "offset": 6912,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "FloatLiteral",
-      "offset": 5871,
+      "offset": 6951,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5915,
+      "offset": 6995,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "FloatLiteral",
-      "offset": 5956,
+      "offset": 7036,
       "length": 3,
       "value": "0.9"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6009,
+      "offset": 7089,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 6053,
+      "offset": 7133,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 6302,
+      "offset": 7382,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "FloatLiteral",
-      "offset": 7005,
+      "offset": 8085,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 7258,
+      "offset": 8338,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 7264,
+      "offset": 8344,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 7831,
+      "offset": 8911,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "FloatLiteral",
-      "offset": 7901,
+      "offset": 8981,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ViewCollectionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 8080,
+      "offset": 9160,
       "length": 4,
       "value": "true"
     },
@@ -8083,267 +8524,274 @@
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1260,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 1739,
+      "offset": 1779,
       "length": 24,
       "value": "\"blesh:sdk:restartAfter\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 2728,
+      "offset": 2820,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 3127,
+      "offset": 3219,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 3269,
+      "offset": 3361,
       "length": 13,
       "value": "\"blesh:appid\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 3287,
+      "offset": 3379,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 3322,
+      "offset": 3414,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 3436,
+      "offset": 3528,
       "length": 13,
       "value": "\"blesh:appid\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3723,
+      "offset": 3815,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 3895,
+      "offset": 3987,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 3935,
+      "offset": 4027,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 3975,
+      "offset": 4067,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 4031,
+      "offset": 4123,
       "length": 24,
       "value": "\"CTTelephonyNetworkInfo\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 4533,
+      "offset": 4625,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 4612,
+      "offset": 4704,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 4691,
+      "offset": 4783,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 4914,
+      "offset": 5006,
       "length": 20,
       "value": "\"unknown.sdk.bundle\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 4993,
+      "offset": 5085,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 5098,
+      "offset": 5190,
       "length": 17,
       "value": "\"CFBundleVersion\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 5909,
+      "offset": 6001,
       "length": 7,
       "value": "\"Apple\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 6242,
+      "offset": 6334,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 6430,
+      "offset": 6522,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 7382,
+      "offset": 7474,
       "length": 31,
       "value": "\"blesh:sdk:mostRecentStartDate\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7533,
+      "offset": 7625,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7681,
+      "offset": 7773,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 7714,
+      "offset": 7806,
       "length": 64,
       "value": "\"BleshSDK Error: [Code=\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 7755,
+      "offset": 7847,
       "length": 1,
       "value": "\"] \""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 7777,
+      "offset": 7869,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 7983,
+      "offset": 8075,
       "length": 8,
       "value": "\"Manual\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 8014,
+      "offset": 8106,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 8089,
+      "offset": 8181,
       "length": 26,
       "value": "\"blesh:sdk:mostRecentHash\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 9113,
+      "offset": 9205,
       "length": 26,
       "value": "\"blesh:sdk:mostRecentHash\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 9203,
+      "offset": 9295,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 9283,
+      "offset": 9375,
       "length": 31,
       "value": "\"blesh:sdk:mostRecentStartDate\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "IntegerLiteral",
-      "offset": 9350,
+      "offset": 9442,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 9400,
+      "offset": 9492,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "StringLiteral",
-      "offset": 9542,
+      "offset": 9634,
       "length": 24,
       "value": "\"blesh:sdk:restartAfter\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 9750,
+      "offset": 9842,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/SdkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 9789,
+      "offset": 9881,
       "length": 5,
       "value": "false"
     },
@@ -8964,6 +9412,48 @@
       "value": "1"
     },
     {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentVerticalAlignmentResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 304,
+      "length": 5,
+      "value": "\"top\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentVerticalAlignmentResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 328,
+      "length": 8,
+      "value": "\"middle\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentVerticalAlignmentResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 355,
+      "length": 8,
+      "value": "\"bottom\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentVerticalAlignmentResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 304,
+      "length": 5,
+      "value": "\"top\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentVerticalAlignmentResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 328,
+      "length": 8,
+      "value": "\"middle\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentVerticalAlignmentResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 355,
+      "length": 8,
+      "value": "\"bottom\""
+    },
+    {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/NonStoryboardView.swift",
       "kind": "StringLiteral",
       "offset": 407,
@@ -9461,6 +9951,27 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/CampaignService.swift",
+      "kind": "StringLiteral",
+      "offset": 2009,
+      "length": 89,
+      "value": "\"BleshSDK: Error loading remote campaign: [Code=\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/CampaignService.swift",
+      "kind": "StringLiteral",
+      "offset": 2075,
+      "length": 1,
+      "value": "\"] \""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/CampaignService.swift",
+      "kind": "StringLiteral",
+      "offset": 2097,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Requests\/Components\/BeaconProximityRequestEnum.swift",
       "kind": "StringLiteral",
       "offset": 393,
@@ -9554,7 +10065,14 @@
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentTypeResponseEnum.swift",
       "kind": "StringLiteral",
-      "offset": 281,
+      "offset": 276,
+      "length": 11,
+      "value": "\"Reference\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentTypeResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 314,
       "length": 16,
       "value": "\"ViewCollection\""
     },
@@ -9568,7 +10086,14 @@
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentTypeResponseEnum.swift",
       "kind": "StringLiteral",
-      "offset": 281,
+      "offset": 276,
+      "length": 11,
+      "value": "\"Reference\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentTypeResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 314,
       "length": 16,
       "value": "\"ViewCollection\""
     },
@@ -9587,32 +10112,46 @@
       "value": "\"BleshSDK.BleshUserLoggedInEvent\""
     },
     {
-      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewRemoteComponentTypeResponseEnum.swift",
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewComponentTypeResponseEnum.swift",
       "kind": "StringLiteral",
-      "offset": 271,
+      "offset": 259,
       "length": 7,
       "value": "\"image\""
     },
     {
-      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewRemoteComponentTypeResponseEnum.swift",
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewComponentTypeResponseEnum.swift",
       "kind": "StringLiteral",
-      "offset": 294,
+      "offset": 282,
       "length": 5,
       "value": "\"web\""
     },
     {
-      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewRemoteComponentTypeResponseEnum.swift",
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewComponentTypeResponseEnum.swift",
       "kind": "StringLiteral",
-      "offset": 271,
+      "offset": 304,
+      "length": 6,
+      "value": "\"text\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewComponentTypeResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 259,
       "length": 7,
       "value": "\"image\""
     },
     {
-      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewRemoteComponentTypeResponseEnum.swift",
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewComponentTypeResponseEnum.swift",
       "kind": "StringLiteral",
-      "offset": 294,
+      "offset": 282,
       "length": 5,
       "value": "\"web\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewComponentTypeResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 304,
+      "length": 6,
+      "value": "\"text\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Library\/Extensions\/StringSha256Extension.swift",
@@ -9648,6 +10187,90 @@
       "offset": 988,
       "length": 6,
       "value": "\"%02x\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontSizeUnitResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 293,
+      "length": 4,
+      "value": "\"dp\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontSizeUnitResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 312,
+      "length": 4,
+      "value": "\"sp\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontSizeUnitResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 331,
+      "length": 4,
+      "value": "\"pt\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontSizeUnitResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 350,
+      "length": 4,
+      "value": "\"px\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontSizeUnitResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 369,
+      "length": 4,
+      "value": "\"mm\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontSizeUnitResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 390,
+      "length": 4,
+      "value": "\"in\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontSizeUnitResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 293,
+      "length": 4,
+      "value": "\"dp\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontSizeUnitResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 312,
+      "length": 4,
+      "value": "\"sp\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontSizeUnitResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 331,
+      "length": 4,
+      "value": "\"pt\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontSizeUnitResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 350,
+      "length": 4,
+      "value": "\"px\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontSizeUnitResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 369,
+      "length": 4,
+      "value": "\"mm\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentFontSizeUnitResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 390,
+      "length": 4,
+      "value": "\"in\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Library\/Extensions\/UIColorInitFromHexRgbAndAlphaExtension.swift",
@@ -9778,35 +10401,49 @@
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Shared\/ContentCommandName.swift",
       "kind": "StringLiteral",
-      "offset": 275,
+      "offset": 273,
+      "length": 10,
+      "value": "\"deepLink\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Shared\/ContentCommandName.swift",
+      "kind": "StringLiteral",
+      "offset": 311,
+      "length": 17,
+      "value": "\"copyToClipboard\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Shared\/ContentCommandName.swift",
+      "kind": "StringLiteral",
+      "offset": 351,
       "length": 12,
       "value": "\"dialNumber\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Shared\/ContentCommandName.swift",
       "kind": "StringLiteral",
-      "offset": 314,
+      "offset": 390,
       "length": 16,
       "value": "\"getCallbackUrl\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Shared\/ContentCommandName.swift",
       "kind": "StringLiteral",
-      "offset": 360,
+      "offset": 436,
       "length": 19,
       "value": "\"playSoundResource\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Shared\/ContentCommandName.swift",
       "kind": "StringLiteral",
-      "offset": 406,
+      "offset": 482,
       "length": 16,
       "value": "\"askForFeedback\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Shared\/ContentCommandName.swift",
       "kind": "StringLiteral",
-      "offset": 442,
+      "offset": 518,
       "length": 9,
       "value": "\"vibrate\""
     },
@@ -9827,37 +10464,93 @@
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Shared\/ContentCommandName.swift",
       "kind": "StringLiteral",
-      "offset": 275,
+      "offset": 273,
+      "length": 10,
+      "value": "\"deepLink\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Shared\/ContentCommandName.swift",
+      "kind": "StringLiteral",
+      "offset": 311,
+      "length": 17,
+      "value": "\"copyToClipboard\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Shared\/ContentCommandName.swift",
+      "kind": "StringLiteral",
+      "offset": 351,
       "length": 12,
       "value": "\"dialNumber\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Shared\/ContentCommandName.swift",
       "kind": "StringLiteral",
-      "offset": 314,
+      "offset": 390,
       "length": 16,
       "value": "\"getCallbackUrl\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Shared\/ContentCommandName.swift",
       "kind": "StringLiteral",
-      "offset": 360,
+      "offset": 436,
       "length": 19,
       "value": "\"playSoundResource\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Shared\/ContentCommandName.swift",
       "kind": "StringLiteral",
-      "offset": 406,
+      "offset": 482,
       "length": 16,
       "value": "\"askForFeedback\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Shared\/ContentCommandName.swift",
       "kind": "StringLiteral",
-      "offset": 442,
+      "offset": 518,
       "length": 9,
       "value": "\"vibrate\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentHorizontalAlignmentResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 309,
+      "length": 6,
+      "value": "\"left\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentHorizontalAlignmentResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 334,
+      "length": 8,
+      "value": "\"center\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentHorizontalAlignmentResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 360,
+      "length": 7,
+      "value": "\"right\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentHorizontalAlignmentResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 309,
+      "length": 6,
+      "value": "\"left\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentHorizontalAlignmentResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 334,
+      "length": 8,
+      "value": "\"center\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Api\/Responses\/Components\/Content\/ContentViewTextComponentHorizontalAlignmentResponseEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 360,
+      "length": 7,
+      "value": "\"right\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/NonStoryboardImageView.swift",
@@ -9886,6 +10579,13 @@
       "offset": 198,
       "length": 22,
       "value": "\"BleshSDK.NonStoryboardImageView\""
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Services\/Content\/CampaignContentService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 964,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/Public\/BleshSdkConfiguration.swift",
@@ -9939,238 +10639,301 @@
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 772,
+      "offset": 750,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 812,
+      "offset": 790,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "FloatLiteral",
-      "offset": 862,
+      "offset": 840,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "FloatLiteral",
-      "offset": 910,
+      "offset": 888,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "FloatLiteral",
-      "offset": 1531,
+      "offset": 1526,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1635,
+      "offset": 1630,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1681,
+      "offset": 1676,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3634,
+      "offset": 3805,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3826,
+      "offset": 3997,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "StringLiteral",
-      "offset": 4091,
+      "offset": 4262,
       "length": 19,
       "value": "\"BleshSdkInterface\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4258,
+      "offset": 4429,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4425,
+      "offset": 4596,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "StringLiteral",
-      "offset": 4553,
+      "offset": 4724,
       "length": 9,
       "value": "\"subview\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "StringLiteral",
-      "offset": 4602,
+      "offset": 4773,
       "length": 11,
       "value": "\"superview\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "StringLiteral",
-      "offset": 4712,
+      "offset": 4883,
       "length": 25,
       "value": "\"|-(-0)-[subview]-(-0)-|\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "Array",
-      "offset": 4748,
+      "offset": 4919,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "StringLiteral",
-      "offset": 4880,
+      "offset": 5051,
       "length": 27,
       "value": "\"V:|-(-0)-[subview]-(-0)-|\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "Array",
-      "offset": 4918,
+      "offset": 5089,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
-      "kind": "FloatLiteral",
-      "offset": 5863,
-      "length": 3,
-      "value": "1.0"
-    },
-    {
-      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
-      "kind": "FloatLiteral",
-      "offset": 5895,
-      "length": 3,
-      "value": "1.0"
-    },
-    {
-      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6291,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 7261,
+      "offset": 5872,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 7385,
+      "offset": 5918,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5973,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6155,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6254,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
+      "kind": "FloatLiteral",
+      "offset": 7721,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8332,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8982,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8994,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9129,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9946,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
+      "kind": "FloatLiteral",
+      "offset": 10143,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10618,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10742,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "FloatLiteral",
-      "offset": 7648,
+      "offset": 11005,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 7660,
+      "offset": 11017,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "FloatLiteral",
-      "offset": 7733,
+      "offset": 11090,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 7996,
+      "offset": 11353,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 8662,
+      "offset": 12019,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 8847,
+      "offset": 12204,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "StringLiteral",
-      "offset": 9449,
+      "offset": 12806,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 9640,
+      "offset": 12997,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "StringLiteral",
-      "offset": 9898,
+      "offset": 13255,
       "length": 19,
       "value": "\"BleshSdkInterface\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "StringLiteral",
-      "offset": 10034,
+      "offset": 13391,
       "length": 9,
       "value": "\"request\""
     },
     {
       "filePath": "\/Users\/arda\/Projects\/SDK\/Ads\/iOS-SDK5\/BleshSDK\/UI\/Views\/ComponentView.swift",
       "kind": "StringLiteral",
-      "offset": 10131,
+      "offset": 13488,
       "length": 7,
       "value": "\"close\""
     },
