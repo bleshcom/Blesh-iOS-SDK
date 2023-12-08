@@ -36,7 +36,7 @@ Blesh iOS SDK collects location information from a device on which the iOS appli
         - [Example: Complete Initialization](#example-complete-initialization)
     - [3. Notifying the Blesh iOS SDK About Changes in Permissions](#3-notifying-the-blesh-ios-sdk-about-changes-in-permissions)
     - [4. Implementing the Blesh iOS SDK Delegate](#4-implementing-the-blesh-ios-sdk-delegate)
-
+    - [5. Supporting Images with Remote Push Notifications](#5-supporting-images-with-remote-push-notifications)
 
 ## Changelog
 
@@ -869,7 +869,7 @@ class MyViewController: UIViewController, CLLocationManagerDelegate {
 @end
 ```
 
-### 4. Implementing the Blesh iOS SDK Delegate 
+### 4. Implementing the Blesh iOS SDK Delegate
 
 Blesh iOS SDK allows you to decide whether or not to display an ad. Following optional methods are provided by the `BleshSdkDelegate` protocol:
 
@@ -902,5 +902,43 @@ class MyViewController: UIViewController, BleshSdkDelegate {
     }
 
     // ... rest of the controller ...
+}
+```
+
+### 5. Supporting Images with Remote Push Notifications
+
+To enable the presentation of images through remote push notifications, Apple mandates the inclusion of media in the notification by utilizing a [Notification Service Extension](https://developer.apple.com/documentation/usernotifications/modifying_content_in_newly_delivered_notifications/).
+
+Blesh iOS SDK supports downloading media attachments via the `decorateRemoteNotification` function.
+
+An example Notification Service Extension can be like the following:
+
+**Example:** Swift
+
+```swift
+import UserNotifications
+import BleshSDK
+
+class NotificationService: UNNotificationServiceExtension {
+    var contentHandler: ((UNNotificationContent) -> Void)?
+    var bestAttemptContent: UNMutableNotificationContent?
+
+    override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
+        self.contentHandler = contentHandler
+        bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
+
+        if let bestAttemptContent = bestAttemptContent {
+            // Download and attach images
+            BleshSdk.sharedInstance.decorateRemoteNotification(request, bestAttemptContent: bestAttemptContent)
+
+            contentHandler(bestAttemptContent)
+        }
+    }
+
+    override func serviceExtensionTimeWillExpire() {
+        if let contentHandler = contentHandler, let bestAttemptContent =  bestAttemptContent {
+            contentHandler(bestAttemptContent)
+        }
+    }
 }
 ```
